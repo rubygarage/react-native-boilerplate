@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalRoot container renders ModalRoot component 1`] = `
+<ModalRoot
+  destroyModal={[Function]}
+  history={Object {}}
+  isVisible={true}
+  modalProps={
+    Object {
+      "customProp": "customProp",
+    }
+  }
+  modalType="MY_MODAL"
+  onCloseModal={[Function]}
+  onDestroyModal={[Function]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+/>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalIconArea component renders correctly default 1`] = `
+<Styled(View)>
+  <Styled(Icon)
+    color="[mocked grey100]"
+    name="close"
+    size={84}
+  />
+  <Styled(Text)>
+    <FormattedMessage
+      id="text_id"
+      values={Object {}}
+    />
+  </Styled(Text)>
+</Styled(View)>
+`;

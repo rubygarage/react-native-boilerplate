@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashRoot component renders correct item 1`] = `
+<Connect(Flash)
+  doAnimation={[MockFunction]}
+  id={0}
+  message="test_message"
+  title="test_title"
+  type="info"
+/>
+`;
+
+exports[`FlashRoot component renders correctly by default 1`] = `
+<Styled(FlatList)
+  data={
+    Array [
+      Object {
+        "id": 0,
+        "message": "test_message",
+        "title": "test_title",
+        "type": "info",
+      },
+    ]
+  }
+  keyExtractor={[Function]}
+  renderItem={[Function]}
+  showsVerticalScrollIndicator={false}
+  topInset={0}
+/>
+`;

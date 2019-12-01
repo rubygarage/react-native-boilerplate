@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField container renders correctly default 1`] = `
+<InputFieldComponent
+  actionWidth={0}
+  errorIcon="icon_id"
+  errorId="error_id"
+  field={
+    Object {
+      "name": "testName",
+    }
+  }
+  form={
+    Object {
+      "errors": Object {
+        "testName": Object {
+          "icon": "icon_id",
+          "id": "error_id",
+        },
+      },
+      "handleBlur": [MockFunction],
+      "handleChange": [MockFunction],
+    }
+  }
+  intl={
+    Object {
+      "formatMessage": [Function],
+    }
+  }
+  isFocused={false}
+  labelId="label_id"
+  onActionRendered={[Function]}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholderId="placeholder_id"
+  theme={
+    Object {
+      "colors": null,
+      "fonts": null,
+      "sizes": null,
+      "type": "Mocked theme",
+    }
+  }
+  values={
+    Object {
+      "testName": "value",
+    }
+  }
+/>
+`;

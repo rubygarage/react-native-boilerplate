@@ -1,0 +1,10 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": ["stylelint-config-react-native-styled-components"],
+  "rules": {
+    "comment-empty-line-before": null,
+    "declaration-colon-space-before": null,
+    "declaration-empty-line-before": null,
+    "number-leading-zero": null
+  }
+}

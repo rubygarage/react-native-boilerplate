@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBody styled component renders corectly default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#000000",
+        "flexGrow": 1,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "position": "relative",
+      },
+    ]
+  }
+>
+  <View />
+</View>
+`;

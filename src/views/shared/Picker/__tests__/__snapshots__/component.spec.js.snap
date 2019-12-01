@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker component renders correctly closed 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+>
+  <Styled(View)>
+    <Styled(Text)>
+      value1
+    </Styled(Text)>
+    <Icon
+      allowFontScaling={false}
+      color="[mocked grey500]"
+      name="down-arrow"
+      size={20}
+    />
+  </Styled(View)>
+</TouchableOpacity>
+`;
+
+exports[`Picker component renders correctly opened 1`] = `
+<SimplePicker
+  isOpen={true}
+  label="value1"
+  onPickerToggle={[MockFunction]}
+  onValueChange={[MockFunction]}
+  options={
+    Array [
+      Object {
+        "key": "key0",
+        "label": "label0",
+        "value": "value0",
+      },
+      Object {
+        "key": "key1",
+        "label": "label1",
+        "value": "value1",
+      },
+    ]
+  }
+  selectedValue="value1"
+  theme={
+    Object {
+      "colors": null,
+      "fonts": null,
+      "sizes": null,
+      "type": "Mocked theme",
+    }
+  }
+/>
+`;

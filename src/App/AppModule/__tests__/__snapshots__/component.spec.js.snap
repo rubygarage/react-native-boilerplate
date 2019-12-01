@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppModule component renders correctly 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colors": Object {
+        "black": "#000000",
+        "white": "#ffffff",
+      },
+      "fonts": Object {},
+      "sizes": Object {},
+    }
+  }
+>
+  <SafeAreaProvider>
+    <NavigationContainer
+      theme="light"
+    />
+    <Connect(ModalRoot) />
+  </SafeAreaProvider>
+</ThemeProvider>
+`;

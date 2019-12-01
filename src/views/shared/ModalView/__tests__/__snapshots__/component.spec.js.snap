@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalView component renders correctly invisible 1`] = `
+<Styled(ReactNativeModal)
+  coverScreen={false}
+  isVisible={false}
+  onBackButtonPress={[MockFunction]}
+  onBackdropPress={[MockFunction]}
+>
+  <Styled(View)>
+    <SafeAreaView>
+      <View />
+    </SafeAreaView>
+  </Styled(View)>
+</Styled(ReactNativeModal)>
+`;
+
+exports[`ModalView component renders correctly visible 1`] = `
+<Styled(ReactNativeModal)
+  coverScreen={false}
+  isVisible={true}
+  onBackButtonPress={[MockFunction]}
+  onBackdropPress={[MockFunction]}
+>
+  <Styled(View)>
+    <SafeAreaView>
+      <View />
+    </SafeAreaView>
+  </Styled(View)>
+</Styled(ReactNativeModal)>
+`;
+
+exports[`ModalView component renders correctly when is not cancelable 1`] = `
+<Styled(ReactNativeModal)
+  coverScreen={false}
+  isVisible={true}
+>
+  <Styled(View)>
+    <SafeAreaView>
+      <View />
+    </SafeAreaView>
+  </Styled(View)>
+</Styled(ReactNativeModal)>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalHeader container renders correctly default 1`] = `
+<ModalHeaderComponent
+  isClosable={false}
+  theme={
+    Object {
+      "colors": null,
+      "fonts": null,
+      "sizes": null,
+      "type": "Mocked theme",
+    }
+  }
+>
+  <View />
+</ModalHeaderComponent>
+`;

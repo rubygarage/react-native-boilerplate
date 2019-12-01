@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimplePicker component renders correctly 1`] = `
+<Styled(Picker)
+  onValueChange={[MockFunction]}
+  selectedValue="value1"
+>
+  <PickerItem
+    key="key0"
+    label="label0"
+    value="value0"
+  />
+  <PickerItem
+    key="key1"
+    label="label1"
+    value="value1"
+  />
+</Styled(Picker)>
+`;

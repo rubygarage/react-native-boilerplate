@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmModal component renders correctly default 1`] = `
+<ModalView
+  isVisible={true}
+  onModalHide={[MockFunction]}
+>
+  <WithTheme(ModalHeader)
+    isClosable={true}
+    onClose={[MockFunction]}
+  >
+    <FormattedMessage
+      id="test_title_id"
+      values={Object {}}
+    />
+  </WithTheme(ModalHeader)>
+  <ModalBody>
+    <Styled(Text)
+      key="test_body_1"
+    >
+      <FormattedMessage
+        id="test_body_1"
+        values={Object {}}
+      />
+    </Styled(Text)>
+    <Styled(Text)
+      key="test_body_1"
+    >
+      <FormattedMessage
+        id="test_body_1"
+        values={Object {}}
+      />
+    </Styled(Text)>
+  </ModalBody>
+  <ModalFooter>
+    <WithTheme(Button)
+      isMarginRight={true}
+      isOutline={true}
+      isSmallWidth={true}
+      onPress={[MockFunction]}
+    >
+      <FormattedMessage
+        id="test_dismiss_id"
+        values={Object {}}
+      />
+    </WithTheme(Button)>
+    <WithTheme(Button)
+      fillColor="[mocked red500]"
+      onPress={[MockFunction]}
+    >
+      <FormattedMessage
+        id="test_confirm_id"
+        values={Object {}}
+      />
+    </WithTheme(Button)>
+  </ModalFooter>
+</ModalView>
+`;
+
+exports[`ConfirmModal component renders correctly with default dismiss button 1`] = `
+<ModalView
+  isVisible={true}
+  onModalHide={[MockFunction]}
+>
+  <WithTheme(ModalHeader)
+    isClosable={true}
+    onClose={[MockFunction]}
+  >
+    <FormattedMessage
+      id="test_title_id"
+      values={Object {}}
+    />
+  </WithTheme(ModalHeader)>
+  <ModalBody>
+    <Styled(Text)
+      key="test_body_1"
+    >
+      <FormattedMessage
+        id="test_body_1"
+        values={Object {}}
+      />
+    </Styled(Text)>
+    <Styled(Text)
+      key="test_body_1"
+    >
+      <FormattedMessage
+        id="test_body_1"
+        values={Object {}}
+      />
+    </Styled(Text)>
+  </ModalBody>
+  <ModalFooter>
+    <WithTheme(Button)
+      isMarginRight={true}
+      isOutline={true}
+      isSmallWidth={true}
+      onPress={[MockFunction]}
+    >
+      <FormattedMessage
+        id="shared.cancel"
+        values={Object {}}
+      />
+    </WithTheme(Button)>
+    <WithTheme(Button)
+      fillColor="[mocked red500]"
+      onPress={[MockFunction]}
+    >
+      <FormattedMessage
+        id="test_confirm_id"
+        values={Object {}}
+      />
+    </WithTheme(Button)>
+  </ModalFooter>
+</ModalView>
+`;

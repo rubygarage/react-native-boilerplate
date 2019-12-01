@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNavigator component renders correctly 1`] = `
+<ContextProvider
+  value="light"
+>
+  <ContextProvider
+    value={
+      Object {
+        "_childrenNavigation": Object {},
+        "actions": Object {},
+        "addListener": [Function],
+        "dangerouslyGetParent": [Function],
+        "dispatch": [Function],
+        "getChildNavigation": [Function],
+        "getScreenProps": [Function],
+        "goBack": [Function],
+        "isFirstRouteInParent": [Function],
+        "isFocused": [Function],
+        "navigate": [Function],
+        "router": Object {
+          "childRouters": Object {
+            "App": Object {
+              "childRouters": Object {
+                "MainStack": Object {
+                  "childRouters": Object {
+                    "Home": null,
+                    "Splash screen": null,
+                    "Stubs": null,
+                  },
+                  "getActionCreators": [Function],
+                  "getActionForPathAndParams": [Function],
+                  "getComponentForRouteName": [Function],
+                  "getComponentForState": [Function],
+                  "getPathAndParamsForState": [Function],
+                  "getScreenOptions": [Function],
+                  "getStateForAction": [Function],
+                },
+              },
+              "getActionCreators": [Function],
+              "getActionForPathAndParams": [Function],
+              "getComponentForRouteName": [Function],
+              "getComponentForState": [Function],
+              "getPathAndParamsForState": [Function],
+              "getScreenOptions": [Function],
+              "getStateForAction": [Function],
+            },
+            "Initial": null,
+          },
+          "getActionCreators": [Function],
+          "getActionForPathAndParams": [Function],
+          "getComponentForRouteName": [Function],
+          "getComponentForState": [Function],
+          "getPathAndParamsForState": [Function],
+          "getScreenOptions": [Function],
+          "getStateForAction": [Function],
+        },
+        "setParams": [Function],
+        "state": Object {
+          "index": 0,
+          "routes": Array [
+            Object {
+              "key": "Initial",
+              "params": undefined,
+              "routeName": "Initial",
+            },
+            Object {
+              "index": 0,
+              "isTransitioning": false,
+              "key": "App",
+              "params": undefined,
+              "routeName": "App",
+              "routes": Array [
+                Object {
+                  "index": 0,
+                  "isTransitioning": false,
+                  "routeName": "MainStack",
+                  "routes": Array [
+                    Object {
+                      "routeName": "Home",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <Navigator
+      navigation={
+        Object {
+          "_childrenNavigation": Object {},
+          "actions": Object {},
+          "addListener": [Function],
+          "dangerouslyGetParent": [Function],
+          "dispatch": [Function],
+          "getChildNavigation": [Function],
+          "getScreenProps": [Function],
+          "goBack": [Function],
+          "isFirstRouteInParent": [Function],
+          "isFocused": [Function],
+          "navigate": [Function],
+          "router": Object {
+            "childRouters": Object {
+              "App": Object {
+                "childRouters": Object {
+                  "MainStack": Object {
+                    "childRouters": Object {
+                      "Home": null,
+                      "Splash screen": null,
+                      "Stubs": null,
+                    },
+                    "getActionCreators": [Function],
+                    "getActionForPathAndParams": [Function],
+                    "getComponentForRouteName": [Function],
+                    "getComponentForState": [Function],
+                    "getPathAndParamsForState": [Function],
+                    "getScreenOptions": [Function],
+                    "getStateForAction": [Function],
+                  },
+                },
+                "getActionCreators": [Function],
+                "getActionForPathAndParams": [Function],
+                "getComponentForRouteName": [Function],
+                "getComponentForState": [Function],
+                "getPathAndParamsForState": [Function],
+                "getScreenOptions": [Function],
+                "getStateForAction": [Function],
+              },
+              "Initial": null,
+            },
+            "getActionCreators": [Function],
+            "getActionForPathAndParams": [Function],
+            "getComponentForRouteName": [Function],
+            "getComponentForState": [Function],
+            "getPathAndParamsForState": [Function],
+            "getScreenOptions": [Function],
+            "getStateForAction": [Function],
+          },
+          "setParams": [Function],
+          "state": Object {
+            "index": 0,
+            "routes": Array [
+              Object {
+                "key": "Initial",
+                "params": undefined,
+                "routeName": "Initial",
+              },
+              Object {
+                "index": 0,
+                "isTransitioning": false,
+                "key": "App",
+                "params": undefined,
+                "routeName": "App",
+                "routes": Array [
+                  Object {
+                    "index": 0,
+                    "isTransitioning": false,
+                    "routeName": "MainStack",
+                    "routes": Array [
+                      Object {
+                        "routeName": "Home",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        }
+      }
+      theme="light"
+    />
+  </ContextProvider>
+</ContextProvider>
+`;

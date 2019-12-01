@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalHeader component renders correctly default 1`] = `
+<Styled(View)>
+  <Styled(Text)>
+    <View />
+  </Styled(Text)>
+</Styled(View)>
+`;
+
+exports[`ModalHeader component renders correctly default 2`] = `
+<Styled(View)>
+  <Styled(TouchableOpacity)
+    onPress={[MockFunction]}
+  >
+    <Icon
+      allowFontScaling={false}
+      name="cross"
+      size={24}
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(Text)>
+    <View />
+  </Styled(Text)>
+</Styled(View)>
+`;

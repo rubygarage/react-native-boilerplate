@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listenConnectionState has valid attributes 1`] = `
+Object {
+  "cancelType": "application/STOP_LISTEN_CONNECTION_STATE",
+  "debounce": 0,
+  "latest": true,
+  "name": undefined,
+  "process": [Function],
+  "processOptions": Object {
+    "dispatchMultiple": true,
+  },
+  "throttle": 0,
+  "transform": undefined,
+  "type": "application/START_LISTEN_CONNECTION_STATE",
+  "validate": undefined,
+  "warnTimeout": 0,
+}
+`;

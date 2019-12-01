@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalHeader styled components S.Close matches snapshot default 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexShrink": 0,
+      "marginRight": 16,
+      "opacity": 1,
+    }
+  }
+/>
+`;
+
+exports[`ModalHeader styled components S.Title matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "letterSpacing": -0.2,
+        "lineHeight": 24,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`ModalHeader styled components S.Wrap matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "rgba(82,97,115, 0.12)",
+        "borderBottomWidth": 1,
+        "borderStyle": "solid",
+        "flexDirection": "row",
+        "flexShrink": 0,
+        "paddingBottom": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 16,
+        "position": "relative",
+      },
+    ]
+  }
+/>
+`;

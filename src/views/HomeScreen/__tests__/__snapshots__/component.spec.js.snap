@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen component renders correctly 1`] = `
+<View>
+  <Text>
+    Home Screen
+  </Text>
+  <Button
+    onPress={[Function]}
+    testID="stubs-button"
+    title="Stubs"
+  />
+</View>
+`;

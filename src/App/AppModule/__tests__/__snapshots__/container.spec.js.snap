@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App module renders correctly 1`] = `
+<AppModuleComponent
+  handleNavRef={[Function]}
+  theme={
+    Object {
+      "colors": Object {
+        "black": "#000000",
+        "white": "#ffffff",
+      },
+      "fonts": Object {},
+      "sizes": Object {},
+    }
+  }
+/>
+`;

@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrap styled components S.ActionButtonWrapper matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 48,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 8,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.Field matches snapshot default 1`] = `
+<TextInput
+  allowFontScaling={true}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "borderColor": "#000000",
+        "borderRadius": 3,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "minHeight": 48,
+        "paddingBottom": 10,
+        "paddingLeft": 12,
+        "paddingRight": "NaN",
+        "paddingTop": 10,
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`Wrap styled components S.Field matches snapshot error 1`] = `
+<TextInput
+  allowFontScaling={true}
+  isError={true}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "borderColor": "#000000",
+        "borderRadius": 3,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "minHeight": 48,
+        "paddingBottom": 10,
+        "paddingLeft": 12,
+        "paddingRight": "NaN",
+        "paddingTop": 10,
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`Wrap styled components S.Field matches snapshot focused 1`] = `
+<TextInput
+  allowFontScaling={true}
+  isFocused={true}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "borderColor": "#000000",
+        "borderRadius": 3,
+        "borderStyle": "solid",
+        "borderWidth": 2,
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "minHeight": 48,
+        "paddingBottom": 10,
+        "paddingLeft": 12,
+        "paddingRight": "NaN",
+        "paddingTop": 10,
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`Wrap styled components S.FieldError matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 8,
+        "marginTop": 6,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.FieldErrorClose matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginRight": 8,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.FieldErrorMessage matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.FieldWrap matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "relative",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.Label matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "marginBottom": 4,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrap styled components S.Wrap matches snapshot default 1`] = `
+<View
+  color={true}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+      },
+    ]
+  }
+/>
+`;

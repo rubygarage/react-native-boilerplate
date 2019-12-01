@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme matches snapshot 1`] = `
+Object {
+  "colors": Object {
+    "black": "#000000",
+    "white": "#ffffff",
+  },
+  "fonts": Object {},
+  "sizes": Object {},
+}
+`;

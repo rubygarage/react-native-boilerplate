@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`en locale matches snapshot 1`] = `
+Object {
+  "locale": "en",
+  "messages": Object {
+    "yup.mixed.isCode": "Invalid room code",
+    "yup.mixed.required": "Can't be blank",
+    "yup.string.max": "Must be equal or less than {max} characters",
+  },
+}
+`;

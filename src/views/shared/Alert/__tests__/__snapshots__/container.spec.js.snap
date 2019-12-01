@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert container renders correctly default 1`] = `
+<Alert
+  backgroundColor="[mocked blue50]"
+  contentColor="[mocked blue500]"
+  iconName="info"
+  message={
+    Object {
+      "id": "message-id",
+    }
+  }
+  theme={
+    Object {
+      "colors": null,
+      "fonts": null,
+      "sizes": null,
+      "type": "Mocked theme",
+    }
+  }
+  title={
+    Object {
+      "id": "title-id",
+    }
+  }
+  type="info"
+/>
+`;

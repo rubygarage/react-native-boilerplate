@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationProgressBar component renders correctly when loading 1`] = `
+<Styled(TouchableOpacity)>
+  <ActivityIndicator
+    animating={true}
+    color="[mocked blue100]"
+    hidesWhenStopped={true}
+    size="small"
+  />
+</Styled(TouchableOpacity)>
+`;
+
+exports[`PaginationProgressBar component renders correctly when not loading 1`] = `""`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoundedButton container renders correctly default 1`] = `
+<Styled(TouchableOpacity)
+  isActive={true}
+  onPress={[MockFunction]}
+>
+  <Icon
+    allowFontScaling={false}
+    color="[mocked white]"
+    name="video-off"
+    size={28}
+  />
+</Styled(TouchableOpacity)>
+`;
+
+exports[`RoundedButton container renders correctly inactive 1`] = `
+<Styled(TouchableOpacity)
+  isActive={false}
+  onPress={[MockFunction]}
+>
+  <Icon
+    allowFontScaling={false}
+    color="[mocked grey700]"
+    name="video-off"
+    size={28}
+  />
+</Styled(TouchableOpacity)>
+`;
+
+exports[`RoundedButton container renders correctly with active icon 1`] = `
+<Styled(TouchableOpacity)
+  isActive={true}
+  onPress={[MockFunction]}
+>
+  <Icon
+    allowFontScaling={false}
+    color="[mocked white]"
+    name="video"
+    size={28}
+  />
+</Styled(TouchableOpacity)>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalView styled components S.Container matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`ModalView styled components S.Overlay matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexGrow": 1,
+        "justifyContent": "flex-end",
+      },
+    ]
+  }
+/>
+`;

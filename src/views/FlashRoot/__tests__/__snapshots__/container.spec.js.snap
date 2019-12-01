@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashRoot container renders correctly 1`] = `
+<FlashRootComponent
+  dispatch={[MockFunction]}
+  doAnimation={[Function]}
+  flashes={Array []}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  topInset={0}
+/>
+`;

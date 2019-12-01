@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoModal component renders correctly default 1`] = `
+<ModalView
+  isVisible={true}
+  onModalHide={[MockFunction]}
+>
+  <WithTheme(ModalHeader)>
+    test title
+  </WithTheme(ModalHeader)>
+  <ModalBody>
+    <Styled(Text)>
+      test detail
+    </Styled(Text)>
+  </ModalBody>
+  <ModalFooter>
+    <WithTheme(Button)
+      onPress={[MockFunction]}
+    >
+      <FormattedMessage
+        id="shared.ok"
+        values={Object {}}
+      />
+    </WithTheme(Button)>
+  </ModalFooter>
+</ModalView>
+`;

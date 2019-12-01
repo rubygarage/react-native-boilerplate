@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField component renders correctly default 1`] = `
+<Styled(View)>
+  <Styled(Text)>
+    <FormattedMessage
+      id="label_id"
+      values={Object {}}
+    />
+  </Styled(Text)>
+  <Styled(View)>
+    <Styled(TextInput)
+      actionWidth={0}
+      isError={false}
+      isFocused={false}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="{Translation id: placeholder_id}"
+      value="value"
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`InputField component renders correctly with action 1`] = `
+<Styled(View)>
+  <Styled(Text)>
+    <FormattedMessage
+      id="label_id"
+      values={Object {}}
+    />
+  </Styled(Text)>
+  <Styled(View)>
+    <Styled(TextInput)
+      actionWidth={0}
+      isError={true}
+      isFocused={false}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="{Translation id: placeholder_id}"
+      value="value"
+    />
+    <Styled(View)>
+      <Styled(View)>
+        <Icon
+          allowFontScaling={false}
+          color="[mocked red500]"
+          name="close"
+          size={16}
+        />
+      </Styled(View)>
+      <Styled(Text)>
+        <FormattedMessage
+          id="error_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Styled(View)>
+    <Styled(View)
+      onLayout={[MockFunction]}
+    >
+      <WithTheme(Button)
+        isSmallHeight={true}
+        isSmallWidth={true}
+        onPress={[MockFunction]}
+      >
+        <FormattedMessage
+          id="action_id"
+          values={Object {}}
+        />
+      </WithTheme(Button)>
+    </Styled(View)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`InputField component renders correctly with error 1`] = `
+<Styled(View)>
+  <Styled(Text)>
+    <FormattedMessage
+      id="label_id"
+      values={Object {}}
+    />
+  </Styled(Text)>
+  <Styled(View)>
+    <Styled(TextInput)
+      actionWidth={0}
+      isError={true}
+      isFocused={false}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="{Translation id: placeholder_id}"
+      value="value"
+    />
+    <Styled(View)>
+      <Styled(View)>
+        <Icon
+          allowFontScaling={false}
+          color="[mocked red500]"
+          name="close"
+          size={16}
+        />
+      </Styled(View)>
+      <Styled(Text)>
+        <FormattedMessage
+          id="error_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Styled(View)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`InputField component renders without label 1`] = `
+<Styled(View)>
+  <Styled(View)>
+    <Styled(TextInput)
+      actionWidth={0}
+      isError={false}
+      isFocused={false}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      placeholder="{Translation id: placeholder_id}"
+      value="value"
+    />
+  </Styled(View)>
+</Styled(View)>
+`;

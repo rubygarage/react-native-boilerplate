@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flash container renders correctly 1`] = `
+<WithTheme(Alert)
+  action={
+    Object {
+      "type": "SOME_ACTION",
+    }
+  }
+  onActionClick={[Function]}
+/>
+`;
+
+exports[`Flash container renders correctly closeable 1`] = `
+<WithTheme(Alert)
+  action={
+    Object {
+      "type": "SOME_ACTION",
+    }
+  }
+  isCloseable={true}
+  onActionClick={[Function]}
+  onCloseClick={[Function]}
+/>
+`;

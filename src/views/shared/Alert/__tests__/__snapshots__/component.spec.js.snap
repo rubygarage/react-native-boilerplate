@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component renders correctly closable 1`] = `
+<Styled(View)
+  color="white"
+  onCloseClick={[MockFunction]}
+>
+  <Styled(View)>
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="info"
+      size={28}
+    />
+  </Styled(View)>
+  <Styled(View)>
+    <Text>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="title_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="subtitle_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Text>
+    <Styled(Text)
+      color="black"
+    >
+      <FormattedMessage
+        id="message_id"
+        values={Object {}}
+      />
+    </Styled(Text)>
+  </Styled(View)>
+  <Styled(TouchableOpacity)
+    onPress={[MockFunction]}
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="cross"
+      size={28}
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Alert component renders correctly default 1`] = `
+<Styled(View)
+  color="white"
+>
+  <Styled(View)>
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="info"
+      size={28}
+    />
+  </Styled(View)>
+  <Styled(View)>
+    <Text>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="title_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="subtitle_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Text>
+    <Styled(Text)
+      color="black"
+    >
+      <FormattedMessage
+        id="message_id"
+        values={Object {}}
+      />
+    </Styled(Text)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`Alert component renders correctly with action button 1`] = `
+<Styled(View)
+  color="white"
+  onCloseClick={[MockFunction]}
+>
+  <Styled(View)>
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="info"
+      size={28}
+    />
+  </Styled(View)>
+  <Styled(View)>
+    <Text>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="title_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="subtitle_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Text>
+    <Styled(Text)
+      color="black"
+    >
+      <FormattedMessage
+        id="message_id"
+        values={Object {}}
+      />
+    </Styled(Text)>
+    <Styled(TouchableOpacity)
+      color="black"
+      onPress={[MockFunction]}
+    >
+      <Styled(Icon)
+        color="[mocked white]"
+        name="video"
+        size={28}
+      />
+      <Styled(Text)>
+        <FormattedMessage
+          id="testActionTextId"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Styled(TouchableOpacity)>
+  </Styled(View)>
+  <Styled(TouchableOpacity)
+    onPress={[MockFunction]}
+  >
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="cross"
+      size={28}
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Alert component renders correctly with string data 1`] = `
+<Styled(View)
+  color="white"
+>
+  <Styled(View)>
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="info"
+      size={28}
+    />
+  </Styled(View)>
+  <Styled(View)>
+    <Text>
+      <Styled(Text)
+        color="black"
+      >
+        test title
+      </Styled(Text)>
+      <Styled(Text)
+        color="black"
+      >
+        test title
+      </Styled(Text)>
+    </Text>
+    <Styled(Text)
+      color="black"
+    >
+      test message
+    </Styled(Text)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`Alert component renders correctly without subtitle 1`] = `
+<Styled(View)
+  color="white"
+>
+  <Styled(View)>
+    <Icon
+      allowFontScaling={false}
+      color="black"
+      name="info"
+      size={28}
+    />
+  </Styled(View)>
+  <Styled(View)>
+    <Text>
+      <Styled(Text)
+        color="black"
+      >
+        <FormattedMessage
+          id="title_id"
+          values={Object {}}
+        />
+      </Styled(Text)>
+    </Text>
+    <Styled(Text)
+      color="black"
+    >
+      <FormattedMessage
+        id="message_id"
+        values={Object {}}
+      />
+    </Styled(Text)>
+  </Styled(View)>
+</Styled(View)>
+`;

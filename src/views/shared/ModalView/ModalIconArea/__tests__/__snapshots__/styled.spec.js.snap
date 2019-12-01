@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalIconArea styled components S.Icon matches snapshot default 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      Array [
+        Object {
+          "marginBottom": 16,
+        },
+      ],
+      Object {
+        "fontFamily": "icomoon",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`ModalIconArea styled components S.Text matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`ModalIconArea styled components S.Wrap matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginBottom": 24,
+        "marginTop": 24,
+      },
+    ]
+  }
+/>
+`;

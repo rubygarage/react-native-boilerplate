@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardView component renders correctly with Android platform 1`] = `
+<KeyboardAvoidingView
+  behavior="padding"
+  enabled={false}
+  keyboardVerticalOffset={0}
+>
+  <TouchableWithoutFeedback
+    onPress={[MockFunction]}
+    testID="touchableView"
+  >
+    <View />
+  </TouchableWithoutFeedback>
+</KeyboardAvoidingView>
+`;
+
+exports[`KeyboardView component renders correctly with iOS platform 1`] = `
+<KeyboardAvoidingView
+  behavior="padding"
+  enabled={true}
+  keyboardVerticalOffset={0}
+>
+  <TouchableWithoutFeedback
+    onPress={[MockFunction]}
+    testID="touchableView"
+  >
+    <View />
+  </TouchableWithoutFeedback>
+</KeyboardAvoidingView>
+`;

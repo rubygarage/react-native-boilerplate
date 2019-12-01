@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker styled components S.PickerValue matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "marginRight": 8,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Picker styled components S.PickerValueWrap matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Picker styled components S.PickerView matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <RNCPicker
+    items={Array []}
+    onChange={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper styled components S.ActionButton matches snapshot default 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 4,
+      "flexDirection": "row",
+      "height": 36,
+      "marginTop": 8,
+      "maxWidth": 200,
+      "opacity": 1,
+      "paddingLeft": 12,
+      "paddingRight": 12,
+    }
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.ActionButtonText matches snapshot default 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#ffffff",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "letterSpacing": -0.2,
+        "lineHeight": 20,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.ActionIcon matches snapshot default 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      Array [
+        Object {
+          "marginRight": 24,
+        },
+      ],
+      Object {
+        "fontFamily": "icomoon",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Wrapper styled components S.CloseButton matches snapshot default 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "color": "#ffffff",
+      "opacity": 1,
+      "position": "absolute",
+      "right": 12,
+      "top": 12,
+    }
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.ContentArea matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexGrow": 1,
+        "paddingRight": 36,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.IconWrap matches snapshot default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexShrink": 0,
+        "marginRight": 12,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.MessageText matches snapshot default 1`] = `
+<Text
+  color="white"
+  style={
+    Array [
+      Object {
+        "color": "white",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "marginBottom": 2,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.MessageTitle matches snapshot default 1`] = `
+<Text
+  color="white"
+  style={
+    Array [
+      Object {
+        "color": "white",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "lineHeight": 20,
+        "marginTop": 2,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.Wrapper matches snapshot closeable 1`] = `
+<View
+  color="white"
+  onCloseClick={[MockFunction]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 4,
+        "flexDirection": "row",
+        "marginBottom": 8,
+        "paddingBottom": 12,
+        "paddingLeft": 12,
+        "paddingRight": 48,
+        "paddingTop": 12,
+        "position": "relative",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Wrapper styled components S.Wrapper matches snapshot default 1`] = `
+<View
+  color="white"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderRadius": 4,
+        "flexDirection": "row",
+        "marginBottom": 8,
+        "paddingBottom": 12,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 12,
+        "position": "relative",
+      },
+    ]
+  }
+/>
+`;
