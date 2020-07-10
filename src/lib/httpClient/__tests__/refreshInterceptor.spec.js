@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { API_HOST } from 'react-native-dotenv';
+import Config from 'react-native-config';
 
 import refreshInterceptor from '../refreshInterceptor';
 import setHttpClientToken from '../setHttpClientToken';
@@ -90,7 +90,7 @@ describe('refreshInterceptor() creates interceptor that', () => {
     await expect(interceptorInstance(error)).resolves
       .toEqual(mockRetryRequest(error.response.config));
 
-    expect(Axios.post).toHaveBeenCalledWith(`${API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
+    expect(Axios.post).toHaveBeenCalledWith(`${Config.API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
     expect(createAccessToken).toHaveBeenCalledWith(refreshResponse.data.meta.jwt.access);
     expect(setHttpClientToken).toHaveBeenCalledWith(store.httpClient, mockToken);
     expect(Axios.request).toHaveBeenCalledWith(error.response.config);
@@ -117,7 +117,7 @@ describe('refreshInterceptor() creates interceptor that', () => {
     await Promise.all(requestExpectations);
 
     expect(Axios.post).toHaveBeenCalledTimes(1);
-    expect(Axios.post).toHaveBeenCalledWith(`${API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
+    expect(Axios.post).toHaveBeenCalledWith(`${Config.API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
     expect(createAccessToken).toHaveBeenCalledWith(refreshResponse.data.meta.jwt.access);
     expect(setHttpClientToken).toHaveBeenCalledWith(store.httpClient, mockToken);
     expect(Axios.request).toHaveBeenCalledTimes(3);
@@ -148,7 +148,7 @@ describe('refreshInterceptor() creates interceptor that', () => {
     await Promise.all(requestExpectations);
 
     expect(Axios.post).toHaveBeenCalledTimes(1);
-    expect(Axios.post).toHaveBeenCalledWith(`${API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
+    expect(Axios.post).toHaveBeenCalledWith(`${Config.API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
     expect(setHttpClientToken).toHaveBeenCalledWith(store.httpClient, null);
     expect(Axios.request).toHaveBeenCalledTimes(0);
   });
@@ -162,7 +162,7 @@ describe('refreshInterceptor() creates interceptor that', () => {
     await expect(interceptorInstance(error)).resolves
       .toEqual(mockRetryRequest(error.response.config));
 
-    expect(Axios.post).toHaveBeenCalledWith(`${API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
+    expect(Axios.post).toHaveBeenCalledWith(`${Config.API_HOST}/api/v1/workspaces/${mockWorkspaceId}/clients/session/refresh`, {}, { headers: { 'X-Refresh-Token': mockRefreshToken } });
     expect(createAccessToken).toHaveBeenCalledWith(refreshResponse.data.meta.jwt.access);
     expect(setHttpClientToken).toHaveBeenCalledWith(store.httpClient, mockToken);
     expect(error.response.config.headers.Authorization).toEqual(mockToken);

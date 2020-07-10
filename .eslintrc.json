@@ -70,6 +70,14 @@
     "jsx-a11y/interactive-supports-focus": 0,
     "jsx-a11y/label-has-for": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/state-in-constructor": 0
+    "react/state-in-constructor": 0,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 1
+      }
+    ]
   }
 }
