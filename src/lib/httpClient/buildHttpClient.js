@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import qs from 'qs';
-import { API_HOST } from 'react-native-dotenv';
+import Config from 'react-native-config';
 
 const httpClientParams = {
   // workaround for axios bug https://github.com/axios/axios/issues/1664#issuecomment-415492981
@@ -11,12 +11,12 @@ const httpClientParams = {
 };
 
 const buildHttpClient = () => Axios.create({
-  baseURL: `${API_HOST}/api/v1`,
+  baseURL: `${Config.API_HOST}/api/v1`,
   ...httpClientParams,
 });
 
 const rootHttpClient = Axios.create({
-  baseURL: `${API_HOST}/api/v1/workspaces`,
+  baseURL: `${Config.API_HOST}/api/v1/workspaces`,
   ...httpClientParams,
 });
 

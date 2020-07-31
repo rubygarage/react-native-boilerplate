@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import { mergeRight } from 'ramda';
-import { API_HOST } from 'react-native-dotenv';
+import Config from 'react-native-config';
 
 import { tokensSelector } from 'state/concepts/session/selectors';
 import { setTokens } from 'state/concepts/session/actions';
@@ -38,7 +38,7 @@ const refreshInterceptor = (store) => {
         isRefreshing = true;
         const state = store.getState();
         const tokens = tokensSelector(state);
-        const response = await Axios.post(`${API_HOST}/api/v1/workspaces${clientsSessionRefreshRoute(tokens.workspaceId)}`, {}, { headers: { 'X-Refresh-Token': tokens.refresh } });
+        const response = await Axios.post(`${Config.API_HOST}/api/v1/workspaces${clientsSessionRefreshRoute(tokens.workspaceId)}`, {}, { headers: { 'X-Refresh-Token': tokens.refresh } });
 
         const { jwt } = response.data.meta;
         store.dispatch(setTokens(mergeRight(tokens, jwt)));

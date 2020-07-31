@@ -2,7 +2,7 @@
 
 exports[`buildHttpClient() returns new instance of axios 1`] = `
 Object {
-  "baseURL": "/api/v1/workspaces",
+  "baseURL": "MOCKED_API_HOST/api/v1/workspaces",
   "headers": Object {
     "common": Object {},
   },

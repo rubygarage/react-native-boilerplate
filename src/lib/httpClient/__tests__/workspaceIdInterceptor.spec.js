@@ -1,4 +1,4 @@
-import { API_HOST } from 'react-native-dotenv';
+import Config from 'react-native-config';
 
 import workspaceIdInterceptor from '../workspaceIdInterceptor';
 
@@ -20,6 +20,6 @@ describe('workspaceIdInterceptor()', () => {
   it('correctly assigns baseURL', () => {
     const modifiedConfig = workspaceIdInterceptor(store)(config);
 
-    expect(modifiedConfig.baseURL).toEqual(`${API_HOST}/api/v1/workspaces/${mockWorkspaceId}`);
+    expect(modifiedConfig.baseURL).toEqual(`${Config.API_HOST}/api/v1/workspaces/${mockWorkspaceId}`);
   });
 });

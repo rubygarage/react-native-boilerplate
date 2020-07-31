@@ -29,7 +29,7 @@
     "react-intl-formatted-duration": "^3.1.0",
     "react-intl-redux": "^2.2.0",
     "react-native": "0.61.5",
-    "react-native-dotenv": "^0.2.0",
+    "react-native-config": "^1.2.1",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-incall-manager": "^3.2.7",
     "react-native-linear-gradient": "^2.5.6",
@@ -117,8 +117,7 @@
       "!index.js",
       "!**/state/configureStore.js",
       "!**/src/stubs/**",
-      "!**/src/constants/permissions/**",
-      "!**/lib/janus/**"
+      "!**/src/constants/permissions/**"
     ],
     "coverageThreshold": {
       "global": {
