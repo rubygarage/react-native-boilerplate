@@ -19,7 +19,7 @@
     "axios": "^0.19.1",
     "formik": "^2.1.4",
     "json-api-normalizer": "^0.4.16",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "luxon": "^1.24.1",
     "prop-types": "^15.7.2",
     "qs": "^6.9.4",
