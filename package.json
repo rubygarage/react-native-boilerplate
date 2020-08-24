@@ -75,7 +75,7 @@
     "jest": "^26.0.1",
     "jest-enzyme": "^7.1.2",
     "lint-staged": "^10.2.6",
-    "metro-react-native-babel-preset": "^0.59.0",
+    "metro-react-native-babel-preset": "^0.63.0",
     "mockdate": "^3.0.2",
     "react-dom": "^16.13.0",
     "react-test-renderer": "^16.13.0",
