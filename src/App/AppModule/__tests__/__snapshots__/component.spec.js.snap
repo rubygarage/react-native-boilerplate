@@ -14,9 +14,7 @@ exports[`AppModule component renders correctly 1`] = `
   }
 >
   <SafeAreaProvider>
-    <NavigationContainer
-      theme="light"
-    />
+    <_default />
     <Connect(ModalRoot) />
   </SafeAreaProvider>
 </Component>

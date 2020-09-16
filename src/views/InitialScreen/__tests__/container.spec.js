@@ -29,6 +29,6 @@ describe('InitialScreen container', () => {
     defaultInstance.componentDidMount();
 
     expect(SplashScreen.hide).toHaveBeenCalled();
-    expect(navigate).toHaveBeenCalledWith('App');
+    expect(navigate).toHaveBeenCalledWith('Home');
   });
 });

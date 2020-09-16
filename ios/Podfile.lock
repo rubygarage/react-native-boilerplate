@@ -316,13 +316,17 @@ PODS:
     - React
   - RNCAsyncStorage (1.12.0):
     - React
+  - RNCMaskedView (0.1.10):
+    - React
   - RNCPicker (1.7.1):
     - React
   - RNGestureHandler (1.8.0):
     - React
   - RNPermissions (2.2.0):
     - React
-  - RNScreens (2.8.0):
+  - RNReanimated (1.13.0):
+    - React
+  - RNScreens (2.11.0):
     - React
   - RNSentry (1.7.2):
     - React
@@ -392,9 +396,11 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeIncallManager (from `../node_modules/react-native-incall-manager`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNCPicker (from `../node_modules/@react-native-community/picker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - "RNSentry (from `../node_modules/@sentry/react-native`)"
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
@@ -485,12 +491,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-incall-manager"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-community/masked-view"
   RNCPicker:
     :path: "../node_modules/@react-native-community/picker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNSentry:
@@ -546,10 +556,12 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   ReactNativeIncallManager: a840ef75640518065742a893e6c6ff98ee820039
   RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
+  RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: a2bf7bad059f23de52add203c3c5a3bc5b5239d8
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNPermissions: 477d88d0be7ecb0a7b344e4d5fbb0352de104626
-  RNScreens: 62211832af51e0aebcf6e8c36bcf7dd65592f244
+  RNReanimated: 89f5e0a04d1dd52fbf27e7e7030d8f80a646a3fc
+  RNScreens: 0e91da98ab26d5d04c7b59a9b6bd694124caf88c
   RNSentry: 2d4a0e18c6dfe93b647c360e0d15c9391d24e9d1
   RNVectorIcons: bc69e6a278b14842063605de32bec61f0b251a59
   Sentry: 8fa58a051237554f22507fb483b9a1de0171a2dc

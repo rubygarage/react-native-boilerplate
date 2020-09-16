@@ -8,7 +8,6 @@ import {
   startListenConnectionState as startListenConnectionStateAction,
   stopListenConnectionState as stopListenConnectionStateAction,
 } from 'state/concepts/application/actions';
-import { setTopLevelNavigator } from 'lib/services/NavigationService';
 import AppModuleComponent from './component';
 
 class AppModule extends Component {
@@ -31,13 +30,8 @@ class AppModule extends Component {
     }
   };
 
-  handleNavRef = (ref) => {
-    this.ref = ref;
-    setTopLevelNavigator(ref);
-  }
-
   render() {
-    return (<AppModuleComponent theme={theme} handleNavRef={this.handleNavRef} />);
+    return (<AppModuleComponent theme={theme} />);
   }
 }
 
