@@ -5,17 +5,17 @@ import IconView from 'views/shared/Icon';
 const Wrap = styled.View`
   justify-content: center;
   align-items: center;
-  margin-top: 24;
-  margin-bottom: 24;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `;
 
 const Icon = styled(IconView)`
-  margin-bottom: 16;
+  margin-bottom: 16px;
 `;
 
 const Text = styled.Text`
-  font-size: 14;
-  line-height: 20;
+  font-size: 14px;
+  line-height: 20px;
   color: ${({ theme }) => theme.colors.black};
 `;
 

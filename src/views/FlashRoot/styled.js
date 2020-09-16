@@ -2,12 +2,12 @@ import styled from 'styled-components/native';
 
 const List = styled.FlatList`
   position: absolute;
-  top: ${({ topInset }) => topInset};
+  top: ${({ topInset }) => topInset}px;
   width: 100%;
-  margin-top: 12;
-  margin-bottom: 12;
-  padding-left: 12;
-  padding-right: 12;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   z-index: 5;
 `;
 

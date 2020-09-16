@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button component renders correctly default 1`] = `
-<Styled(TouchableOpacity)
+<Styled(Component)
   disabled={false}
   fillColor="[mocked blue200]"
   isBorder={false}
@@ -20,11 +20,11 @@ exports[`Button component renders correctly default 1`] = `
       Test Child
     </Text>
   </Styled(Text)>
-</Styled(TouchableOpacity)>
+</Styled(Component)>
 `;
 
 exports[`Button component renders correctly with enabled styles 1`] = `
-<Styled(TouchableOpacity)
+<Styled(Component)
   disabled={false}
   fillColor="[mocked blue200]"
   isBorder={false}
@@ -43,11 +43,11 @@ exports[`Button component renders correctly with enabled styles 1`] = `
       Test Child
     </Text>
   </Styled(Text)>
-</Styled(TouchableOpacity)>
+</Styled(Component)>
 `;
 
 exports[`Button component renders correctly with enabled styles and fillColor 1`] = `
-<Styled(TouchableOpacity)
+<Styled(Component)
   disabled={false}
   fillColor="[mocked green500]"
   isBorder={false}
@@ -66,11 +66,11 @@ exports[`Button component renders correctly with enabled styles and fillColor 1`
       Test Child
     </Text>
   </Styled(Text)>
-</Styled(TouchableOpacity)>
+</Styled(Component)>
 `;
 
 exports[`Button component renders correctly with loading state 1`] = `
-<Styled(TouchableOpacity)
+<Styled(Component)
   disabled={false}
   fillColor="[mocked blue200]"
   isBorder={false}
@@ -87,5 +87,5 @@ exports[`Button component renders correctly with loading state 1`] = `
     hidesWhenStopped={true}
     size="large"
   />
-</Styled(TouchableOpacity)>
+</Styled(Component)>
 `;

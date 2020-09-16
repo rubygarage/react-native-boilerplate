@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 const Wrap = styled.TouchableOpacity`
   width: 100%;
-  height: 40;
+  height: 40px;
   align-items: center;
   justify-content: center;
 `;

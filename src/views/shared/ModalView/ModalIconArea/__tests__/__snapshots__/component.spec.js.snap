@@ -10,7 +10,6 @@ exports[`ModalIconArea component renders correctly default 1`] = `
   <Styled(Text)>
     <FormattedMessage
       id="text_id"
-      values={Object {}}
     />
   </Styled(Text)>
 </Styled(View)>

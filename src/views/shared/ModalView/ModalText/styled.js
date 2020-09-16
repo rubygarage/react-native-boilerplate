@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 const ModalText = styled.Text`
-  margin-bottom: 8;
-  font-size: 14;
-  line-height: 20;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 20px;
   color:${({ theme }) => theme.colors.black};
 `;
 

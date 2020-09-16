@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button container renders correctly default 1`] = `
-<Styled(TouchableOpacity)
+<Styled(Component)
   disabled={false}
   fillColor="[mocked blue200]"
   isBorder={false}
@@ -20,5 +20,5 @@ exports[`Button container renders correctly default 1`] = `
       Test Child
     </Text>
   </Styled(Text)>
-</Styled(TouchableOpacity)>
+</Styled(Component)>
 `;

@@ -11,7 +11,6 @@ exports[`ConfirmModal component renders correctly default 1`] = `
   >
     <FormattedMessage
       id="test_title_id"
-      values={Object {}}
     />
   </WithTheme(ModalHeader)>
   <ModalBody>
@@ -20,7 +19,6 @@ exports[`ConfirmModal component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="test_body_1"
-        values={Object {}}
       />
     </Styled(Text)>
     <Styled(Text)
@@ -28,7 +26,6 @@ exports[`ConfirmModal component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="test_body_1"
-        values={Object {}}
       />
     </Styled(Text)>
   </ModalBody>
@@ -41,7 +38,6 @@ exports[`ConfirmModal component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="test_dismiss_id"
-        values={Object {}}
       />
     </WithTheme(Button)>
     <WithTheme(Button)
@@ -50,7 +46,6 @@ exports[`ConfirmModal component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="test_confirm_id"
-        values={Object {}}
       />
     </WithTheme(Button)>
   </ModalFooter>
@@ -68,7 +63,6 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
   >
     <FormattedMessage
       id="test_title_id"
-      values={Object {}}
     />
   </WithTheme(ModalHeader)>
   <ModalBody>
@@ -77,7 +71,6 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
     >
       <FormattedMessage
         id="test_body_1"
-        values={Object {}}
       />
     </Styled(Text)>
     <Styled(Text)
@@ -85,7 +78,6 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
     >
       <FormattedMessage
         id="test_body_1"
-        values={Object {}}
       />
     </Styled(Text)>
   </ModalBody>
@@ -98,7 +90,6 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
     >
       <FormattedMessage
         id="shared.cancel"
-        values={Object {}}
       />
     </WithTheme(Button)>
     <WithTheme(Button)
@@ -107,7 +98,6 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
     >
       <FormattedMessage
         id="test_confirm_id"
-        values={Object {}}
       />
     </WithTheme(Button)>
   </ModalFooter>

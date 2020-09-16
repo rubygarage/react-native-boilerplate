@@ -4,9 +4,12 @@ exports[`withSafeArea renders correctly 1`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}
   style={
-    Object {
-      "flex": 1,
-    }
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
   }
 />
 `;
@@ -15,9 +18,12 @@ exports[`withSafeArea renders correctly 2`] = `
 <RNCSafeAreaProvider
   onInsetsChange={[Function]}
   style={
-    Object {
-      "flex": 1,
-    }
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
   }
 >
   <View

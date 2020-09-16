@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PaginationProgressBar container renders correctly 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "colors": null,
+      "fonts": null,
+      "sizes": null,
+      "type": "Mocked theme",
+    }
+  }
+>
+  <WithTheme(PaginationProgressBar) />
+</ContextProvider>
 `;

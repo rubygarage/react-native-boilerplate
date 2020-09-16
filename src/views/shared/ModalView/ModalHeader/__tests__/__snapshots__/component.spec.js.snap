@@ -10,7 +10,7 @@ exports[`ModalHeader component renders correctly default 1`] = `
 
 exports[`ModalHeader component renders correctly default 2`] = `
 <Styled(View)>
-  <Styled(TouchableOpacity)
+  <Styled(Component)
     onPress={[MockFunction]}
   >
     <Icon
@@ -18,7 +18,7 @@ exports[`ModalHeader component renders correctly default 2`] = `
       name="cross"
       size={24}
     />
-  </Styled(TouchableOpacity)>
+  </Styled(Component)>
   <Styled(Text)>
     <View />
   </Styled(Text)>

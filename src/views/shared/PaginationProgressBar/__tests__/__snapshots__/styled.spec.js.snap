@@ -4,7 +4,6 @@ exports[`PaginationProgressBar styled components S.Wrap matches snapshot default
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

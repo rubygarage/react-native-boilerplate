@@ -5,11 +5,10 @@ exports[`InputField component renders correctly default 1`] = `
   <Styled(Text)>
     <FormattedMessage
       id="label_id"
-      values={Object {}}
     />
   </Styled(Text)>
   <Styled(View)>
-    <Styled(TextInput)
+    <Styled(Component)
       actionWidth={0}
       isError={false}
       isFocused={false}
@@ -27,11 +26,10 @@ exports[`InputField component renders correctly with action 1`] = `
   <Styled(Text)>
     <FormattedMessage
       id="label_id"
-      values={Object {}}
     />
   </Styled(Text)>
   <Styled(View)>
-    <Styled(TextInput)
+    <Styled(Component)
       actionWidth={0}
       isError={true}
       isFocused={false}
@@ -52,7 +50,6 @@ exports[`InputField component renders correctly with action 1`] = `
       <Styled(Text)>
         <FormattedMessage
           id="error_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Styled(View)>
@@ -66,7 +63,6 @@ exports[`InputField component renders correctly with action 1`] = `
       >
         <FormattedMessage
           id="action_id"
-          values={Object {}}
         />
       </WithTheme(Button)>
     </Styled(View)>
@@ -79,11 +75,10 @@ exports[`InputField component renders correctly with error 1`] = `
   <Styled(Text)>
     <FormattedMessage
       id="label_id"
-      values={Object {}}
     />
   </Styled(Text)>
   <Styled(View)>
-    <Styled(TextInput)
+    <Styled(Component)
       actionWidth={0}
       isError={true}
       isFocused={false}
@@ -104,7 +99,6 @@ exports[`InputField component renders correctly with error 1`] = `
       <Styled(Text)>
         <FormattedMessage
           id="error_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Styled(View)>
@@ -115,7 +109,7 @@ exports[`InputField component renders correctly with error 1`] = `
 exports[`InputField component renders without label 1`] = `
 <Styled(View)>
   <Styled(View)>
-    <Styled(TextInput)
+    <Styled(Component)
       actionWidth={0}
       isError={false}
       isFocused={false}

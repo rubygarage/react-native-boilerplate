@@ -33,7 +33,6 @@ exports[`Button styled components S.Wrap matches snapshot border 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -67,7 +66,6 @@ exports[`Button styled components S.Wrap matches snapshot default 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -101,7 +99,6 @@ exports[`Button styled components S.Wrap matches snapshot filled 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -135,7 +132,6 @@ exports[`Button styled components S.Wrap matches snapshot isSmallHeight 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -169,7 +165,6 @@ exports[`Button styled components S.Wrap matches snapshot isSmallWidth 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -203,7 +198,6 @@ exports[`Button styled components S.Wrap matches snapshot margin bottom 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -237,7 +231,6 @@ exports[`Button styled components S.Wrap matches snapshot margin right 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -271,7 +264,6 @@ exports[`Button styled components S.Wrap matches snapshot outline 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

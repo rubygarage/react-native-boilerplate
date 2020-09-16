@@ -20,7 +20,6 @@ exports[`Alert component renders correctly closable 1`] = `
       >
         <FormattedMessage
           id="title_id"
-          values={Object {}}
         />
       </Styled(Text)>
       <Styled(Text)
@@ -28,7 +27,6 @@ exports[`Alert component renders correctly closable 1`] = `
       >
         <FormattedMessage
           id="subtitle_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Text>
@@ -37,11 +35,10 @@ exports[`Alert component renders correctly closable 1`] = `
     >
       <FormattedMessage
         id="message_id"
-        values={Object {}}
       />
     </Styled(Text)>
   </Styled(View)>
-  <Styled(TouchableOpacity)
+  <Styled(Component)
     onPress={[MockFunction]}
   >
     <Icon
@@ -50,7 +47,7 @@ exports[`Alert component renders correctly closable 1`] = `
       name="cross"
       size={28}
     />
-  </Styled(TouchableOpacity)>
+  </Styled(Component)>
 </Styled(View)>
 `;
 
@@ -73,7 +70,6 @@ exports[`Alert component renders correctly default 1`] = `
       >
         <FormattedMessage
           id="title_id"
-          values={Object {}}
         />
       </Styled(Text)>
       <Styled(Text)
@@ -81,7 +77,6 @@ exports[`Alert component renders correctly default 1`] = `
       >
         <FormattedMessage
           id="subtitle_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Text>
@@ -90,7 +85,6 @@ exports[`Alert component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="message_id"
-        values={Object {}}
       />
     </Styled(Text)>
   </Styled(View)>
@@ -117,7 +111,6 @@ exports[`Alert component renders correctly with action button 1`] = `
       >
         <FormattedMessage
           id="title_id"
-          values={Object {}}
         />
       </Styled(Text)>
       <Styled(Text)
@@ -125,7 +118,6 @@ exports[`Alert component renders correctly with action button 1`] = `
       >
         <FormattedMessage
           id="subtitle_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Text>
@@ -134,10 +126,9 @@ exports[`Alert component renders correctly with action button 1`] = `
     >
       <FormattedMessage
         id="message_id"
-        values={Object {}}
       />
     </Styled(Text)>
-    <Styled(TouchableOpacity)
+    <Styled(Component)
       color="black"
       onPress={[MockFunction]}
     >
@@ -149,12 +140,11 @@ exports[`Alert component renders correctly with action button 1`] = `
       <Styled(Text)>
         <FormattedMessage
           id="testActionTextId"
-          values={Object {}}
         />
       </Styled(Text)>
-    </Styled(TouchableOpacity)>
+    </Styled(Component)>
   </Styled(View)>
-  <Styled(TouchableOpacity)
+  <Styled(Component)
     onPress={[MockFunction]}
   >
     <Icon
@@ -163,7 +153,7 @@ exports[`Alert component renders correctly with action button 1`] = `
       name="cross"
       size={28}
     />
-  </Styled(TouchableOpacity)>
+  </Styled(Component)>
 </Styled(View)>
 `;
 
@@ -220,7 +210,6 @@ exports[`Alert component renders correctly without subtitle 1`] = `
       >
         <FormattedMessage
           id="title_id"
-          values={Object {}}
         />
       </Styled(Text)>
     </Text>
@@ -229,7 +218,6 @@ exports[`Alert component renders correctly without subtitle 1`] = `
     >
       <FormattedMessage
         id="message_id"
-        values={Object {}}
       />
     </Styled(Text)>
   </Styled(View)>
