@@ -10,10 +10,6 @@
 yarn && cd ios && pod install && cd ..
 ```
 
-```bash
-npx react-native link
-```
-
 ### Android
 
 ```bash
