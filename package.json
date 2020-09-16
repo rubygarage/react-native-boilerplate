@@ -52,7 +52,7 @@
     "redux-object": "^0.5.10",
     "redux-persist": "^6.0.0",
     "reselect": "^4.0.0",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.2.0",
     "yup": "^0.29.3"
   },
   "devDependencies": {
