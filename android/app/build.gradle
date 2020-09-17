@@ -1,4 +1,10 @@
 apply plugin: "com.android.application"
+
+project.ext.envConfigFiles = [
+    debug: ".env.development",
+    release: ".env.production",
+]
+
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
@@ -135,6 +141,7 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+        resValue "string", "build_config_package", "com.drunkjesus"
     }
     splits {
         abi {

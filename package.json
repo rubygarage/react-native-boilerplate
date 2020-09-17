@@ -10,7 +10,11 @@
     "lint": "eslint --format codeframe ./ && yarn lint:css",
     "lint:css": "stylelint './src/**/*.js'",
     "test:circle": "jest --coverage --maxWorkers=3",
-    "postinstall": "yarn jetify"
+    "postinstall": "yarn jetify",
+    "android:install:debug": "cd android && ./gradlew installDebug && adb reverse tcp:8081 tcp:8081",
+    "android:install:release": "cd android && ./gradlew installRelease && adb reverse tcp:8081 tcp:8081",
+    "android:generate:bundle": "cd android && ./gradlew bundleRelease",
+    "android:clean": "cd android/ && ./gradlew clean && cd .."
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.0",
