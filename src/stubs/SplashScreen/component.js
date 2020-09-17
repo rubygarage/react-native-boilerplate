@@ -16,8 +16,8 @@ SplashScreen.Container = styled.View`
 `;
 
 SplashScreen.LogoText = styled.Text`
-  font-size: 72;
-  line-height: 96;
+  font-size: 72px;
+  line-height: 96px;
   color: ${colors.black};
   font-weight: bold;
 `;
