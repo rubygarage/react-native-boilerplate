@@ -8,13 +8,6 @@ target 'DrunkJesusMobile' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
-  target 'DrunkJesusMobileTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -28,13 +21,3 @@ target 'DrunkJesusMobile' do
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
   pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone.podspec"
 end
-
-target 'DrunkJesusMobile-tvOS' do
-  # Pods for DrunkJesusMobile-tvOS
-
-  target 'DrunkJesusMobile-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
-

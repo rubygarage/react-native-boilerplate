@@ -5,6 +5,15 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "echo &quot;.env.development&quot; &gt; /tmp/envfile&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,9 +23,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "DrunkJesusMobile-tvOS.app"
-               BlueprintName = "DrunkJesusMobile-tvOS"
+               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+               BuildableName = "DrunkJesusMobile.app"
+               BlueprintName = "DrunkJesusMobile"
                ReferencedContainer = "container:DrunkJesusMobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +41,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "DrunkJesusMobile-tvOSTests.xctest"
-               BlueprintName = "DrunkJesusMobile-tvOSTests"
+               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+               BuildableName = "DrunkJesusMobileTests.xctest"
+               BlueprintName = "DrunkJesusMobileTests"
                ReferencedContainer = "container:DrunkJesusMobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -54,9 +63,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "DrunkJesusMobile-tvOS.app"
-            BlueprintName = "DrunkJesusMobile-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "DrunkJesusMobile.app"
+            BlueprintName = "DrunkJesusMobile"
             ReferencedContainer = "container:DrunkJesusMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,9 +80,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "DrunkJesusMobile-tvOS.app"
-            BlueprintName = "DrunkJesusMobile-tvOS"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "DrunkJesusMobile.app"
+            BlueprintName = "DrunkJesusMobile"
             ReferencedContainer = "container:DrunkJesusMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

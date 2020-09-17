@@ -9,6 +9,12 @@
 ```bash
 yarn && cd ios && pod install && cd ..
 ```
+<br/>
+
+You need to create `.env.development`, `.env.production` files.
+Fill them according `.env.example`
+
+<br/>
 
 ### Android
 
