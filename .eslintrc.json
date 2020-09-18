@@ -27,7 +27,8 @@
     }
   },
   "plugins": [
-    "react-hooks"
+    "react-hooks",
+    "detox"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",

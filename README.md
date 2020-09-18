@@ -11,7 +11,7 @@ yarn && cd ios && pod install && cd ..
 ```
 <br/>
 
-You need to create `.env.development`, `.env.production` files.
+You need to create `.env.development`, `.env.production`, `.env.testing` files.
 Fill them according `.env.example`
 
 <br/>
