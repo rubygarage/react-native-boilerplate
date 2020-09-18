@@ -5,7 +5,7 @@ import { Button, Text, View } from 'react-native';
 const HomeScreenComponent = ({
   navigation: { navigate },
 }) => (
-  <View>
+  <View testID="HomeScreen">
     <Text>Home Screen</Text>
     <Button
       title="Stubs"
