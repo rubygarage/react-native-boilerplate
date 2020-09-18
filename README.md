@@ -30,6 +30,8 @@ npx react-native run-ios
 
 ### Testing
 
+<br/>
+
 ### Lint
 
 ```bash
@@ -40,6 +42,20 @@ yarn lint
 
 ```bash
 yarn test --coverage
+```
+
+### e2e tests
+<br/>
+You can use corresponding commands for building and starting tests.
+
+```bash
+yarn detox:build:ios
+yarn detox:run:ios
+```
+
+```bash
+yarn detox:build:android
+yarn detox:run:android
 ```
 
 ### New project setup
