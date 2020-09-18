@@ -5,9 +5,9 @@ const Wrap = styled.View`
 `;
 
 const Label = styled.Text`
-  margin-bottom: 4;
-  font-size: 14;
-  line-height: 20;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
   color: ${({ theme }) => theme.colors.black};
 `;
 
@@ -16,9 +16,9 @@ const FieldWrap = styled.View`
 `;
 
 const Field = styled.TextInput`
-  border-radius: 3;
-  min-height: 48;
-  border-width: ${({ isFocused, isError }) => (isFocused && !isError ? 2 : 1)};
+  border-radius: 3px;
+  min-height: 48px;
+  border-width: ${({ isFocused, isError }) => (isFocused && !isError ? '2px' : '1px')};
   border-style: solid;
   border-color: ${({ theme, isError, isFocused }) => {
     if (isError) {
@@ -29,36 +29,36 @@ const Field = styled.TextInput`
     }
     return theme.colors.black;
   }};
-  padding-top: 10;
+  padding-top: 10px;
   padding-right: ${({ actionWidth }) => (actionWidth + 12)};
-  padding-bottom: 10;
-  padding-left: 12;
-  font-size: 14;
-  line-height: 20;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 20px;
   color: ${({ theme }) => theme.colors.black};
 `;
 
 const FieldError = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-top: 6;
-  margin-bottom: 8;
+  margin-top: 6px;
+  margin-bottom: 8px;
 `;
 
 const FieldErrorClose = styled.View`
-  margin-right: 8;
+  margin-right: 8px;
 `;
 
 const FieldErrorMessage = styled.Text`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 14;
-  line-height: 20;
+  font-size: 14px;
+  line-height: 20px;
 `;
 
 const ActionButtonWrapper = styled.View`
   position: absolute;
-  height: 48;
-  right: 8;
+  height: 48px;
+  right: 8px;
   justify-content: center;
 `;
 

@@ -4,7 +4,6 @@ exports[`ModalHeader styled components S.Close matches snapshot default 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

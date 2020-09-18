@@ -4,7 +4,6 @@ exports[`RoundedButton styled components S.Wrap matches snapshot active 1`] = `
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -35,7 +34,6 @@ exports[`RoundedButton styled components S.Wrap matches snapshot inactive 1`] = 
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

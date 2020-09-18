@@ -6,10 +6,10 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppNavigator from '../navigation/AppNavigator';
 import ModalRoot from '../../views/ModalRoot';
 
-const AppModuleComponent = ({ theme, handleNavRef }) => (
+const AppModuleComponent = ({ theme }) => (
   <ThemeProvider theme={theme}>
     <SafeAreaProvider>
-      <AppNavigator ref={handleNavRef} />
+      <AppNavigator />
       <ModalRoot />
     </SafeAreaProvider>
   </ThemeProvider>
@@ -17,7 +17,6 @@ const AppModuleComponent = ({ theme, handleNavRef }) => (
 
 AppModuleComponent.propTypes = {
   theme: PropTypes.shape().isRequired,
-  handleNavRef: PropTypes.func.isRequired,
 };
 
 export default AppModuleComponent;

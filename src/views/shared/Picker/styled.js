@@ -11,10 +11,10 @@ const PickerValueWrap = styled.View`
 `;
 
 const PickerValue = styled.Text`
-  font-size: 14;
-  line-height: 20;
+  font-size: 14px;
+  line-height: 20px;
   color: ${({ theme }) => theme.colors.black};
-  margin-right: 8;
+  margin-right: 8px;
 `;
 
 export { PickerView, PickerValueWrap, PickerValue };

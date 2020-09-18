@@ -4,7 +4,6 @@ exports[`Wrapper styled components S.ActionButton matches snapshot default 1`] =
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -76,7 +75,6 @@ exports[`Wrapper styled components S.CloseButton matches snapshot default 1`] = 
 <View
   accessible={true}
   focusable={false}
-  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

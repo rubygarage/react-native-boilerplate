@@ -14,8 +14,8 @@ const Overlay = styled.View`
 
 const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.white};
-  border-top-left-radius: 4;
-  border-top-right-radius: 4;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 `;
 
 export { Modal, Overlay, Container };

@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 import diveTo from 'utils/testHelpers/diveToEnzyme';
-import { setTopLevelNavigator } from 'lib/services/NavigationService';
 import { startListenConnectionState, stopListenConnectionState } from 'state/concepts/application/actions';
 import AppModule, { AppModuleContainer } from '../container';
 
@@ -23,7 +22,6 @@ jest.mock('state/concepts/application/actions', () => ({
 const store = configureStore()({});
 store.dispatch = jest.fn();
 const defaultProps = { store };
-const testRef = {};
 
 describe('App module', () => {
   const wrapper = shallow(<AppModule {...defaultProps} />);
@@ -59,10 +57,5 @@ describe('App module', () => {
     const appState = 'background';
     instance.handleAppStateChange(appState);
     expect(stopListenConnectionState).toHaveBeenCalled();
-  });
-
-  it('handleNavRef calls setTopLevelNavigator', () => {
-    instance.handleNavRef(testRef);
-    expect(setTopLevelNavigator).toHaveBeenCalledWith(testRef);
   });
 });

@@ -6,7 +6,7 @@ class InitialScreen extends React.Component {
   componentDidMount() {
     const { navigation: { navigate } } = this.props;
     SplashScreen.hide();
-    navigate('App');
+    navigate('Home');
   }
 
   render() {

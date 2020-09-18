@@ -36,10 +36,8 @@ npm-debug.log
 yarn-error.log
 coverage/
 
-# .env
-#
-.env
-.env.production
+.env.*
+!.env.example
 
 # BUCK
 buck-out/

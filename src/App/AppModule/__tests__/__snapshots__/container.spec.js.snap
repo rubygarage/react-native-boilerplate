@@ -2,7 +2,6 @@
 
 exports[`App module renders correctly 1`] = `
 <AppModuleComponent
-  handleNavRef={[Function]}
   theme={
     Object {
       "colors": Object {

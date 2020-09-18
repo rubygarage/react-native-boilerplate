@@ -19,7 +19,6 @@ exports[`InfoModal component renders correctly default 1`] = `
     >
       <FormattedMessage
         id="shared.ok"
-        values={Object {}}
       />
     </WithTheme(Button)>
   </ModalFooter>
