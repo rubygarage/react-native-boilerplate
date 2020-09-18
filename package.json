@@ -123,6 +123,9 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!react-native)/.+"
     ],
+    "testPathIgnorePatterns": [
+      "/e2e/*"
+    ],
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
@@ -134,7 +137,8 @@
       "!index.js",
       "!**/state/configureStore.js",
       "!**/src/stubs/**",
-      "!**/src/constants/permissions/**"
+      "!**/src/constants/permissions/**",
+      "!e2e/**"
     ],
     "coverageThreshold": {
       "global": {
