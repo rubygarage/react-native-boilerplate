@@ -14,7 +14,11 @@
     "android:install:debug": "cd android && ./gradlew installDebug && adb reverse tcp:8081 tcp:8081",
     "android:install:release": "cd android && ./gradlew installRelease && adb reverse tcp:8081 tcp:8081",
     "android:generate:bundle": "cd android && ./gradlew bundleRelease",
-    "android:clean": "cd android/ && ./gradlew clean && cd .."
+    "android:clean": "cd android/ && ./gradlew clean && cd ..",
+    "detox:build:ios": "detox build --configuration ios",
+    "detox:run:ios": "detox test --configuration ios --loglevel verbose",
+    "detox:build:android": "detox build --configuration android",
+    "detox:run:android": "detox test --configuration android --loglevel verbose"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.0",
@@ -68,18 +72,22 @@
     "babel-jest": "^26.3.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-module-resolver": "^4.0.0",
+    "detox": "^17.5.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
     "enzyme-to-json": "^3.5.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-plugin-detox": "^1.0.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "jest-circus": "^26.4.2",
+    "jest-cli": "^26.4.2",
     "jest-enzyme": "^7.1.2",
     "jetifier": "^1.6.6",
     "lint-staged": "^10.3.0",
@@ -115,6 +123,9 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!react-native)/.+"
     ],
+    "testPathIgnorePatterns": [
+      "/e2e/*"
+    ],
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
@@ -126,7 +137,8 @@
       "!index.js",
       "!**/state/configureStore.js",
       "!**/src/stubs/**",
-      "!**/src/constants/permissions/**"
+      "!**/src/constants/permissions/**",
+      "!e2e/**"
     ],
     "coverageThreshold": {
       "global": {
