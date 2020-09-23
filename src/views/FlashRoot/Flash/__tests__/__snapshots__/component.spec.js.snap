@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flash component renders correctly 1`] = `
+<Alert
+  action={
+    Object {
+      "type": "TEST",
+    }
+  }
+  isCloseable={true}
+  onActionClick={[MockFunction]}
+  onCloseClick={[MockFunction]}
+  title="Some"
+  type="info"
+/>
+`;
+
+exports[`Flash component renders correctly when isCloseable equals false 1`] = `
+<Alert
+  action={
+    Object {
+      "type": "TEST",
+    }
+  }
+  isCloseable={false}
+  onActionClick={[MockFunction]}
+  title="Some"
+  type="info"
+/>
+`;
