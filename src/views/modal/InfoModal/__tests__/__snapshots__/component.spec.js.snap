@@ -14,13 +14,21 @@ exports[`InfoModal component renders correctly default 1`] = `
     </Styled(Text)>
   </ModalBody>
   <ModalFooter>
-    <WithTheme(Button)
+    <Button
+      disabled={false}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
+      isMarginRight={false}
+      isOutline={false}
+      isSmallHeight={false}
+      isSmallWidth={false}
       onPress={[MockFunction]}
     >
       <FormattedMessage
         id="shared.ok"
       />
-    </WithTheme(Button)>
+    </Button>
   </ModalFooter>
 </ModalView>
 `;

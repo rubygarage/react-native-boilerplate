@@ -1,31 +1,27 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { useSelector } from 'react-redux';
+
 import ModalRoot from '../component';
 
 jest.mock('../modalComponents', () => ({ MY_MODAL: { key: 'MY_MODAL', modal: jest.fn() } }));
 
-describe('ModalRoot component', () => {
-  const defaultProps = {
-    isVisible: true,
-    modalType: 'MY_MODAL',
-    modalProps: { customProp: 'customProp' },
-    onCloseModal: jest.fn(),
-    onDestroyModal: jest.fn(),
-  };
+jest.mock('react-redux', () => ({
+  useDispatch: jest.fn(),
+  useSelector: jest.fn(() => 'MY_MODAL'),
+}));
 
+describe('ModalRoot component', () => {
   it('renders ModalRoot when modalType is present', () => {
-    const component = shallow(<ModalRoot {...defaultProps} />);
+    const component = shallow(<ModalRoot />);
 
     expect(component).toMatchSnapshot();
   });
 
   it('return null unless modalType present', () => {
-    const props = {
-      ...defaultProps,
-      modalType: null,
-    };
+    useSelector.mockImplementation(jest.fn(() => null));
 
-    const component = shallow(<ModalRoot {...props} />);
+    const component = shallow(<ModalRoot />);
 
     expect(component).toMatchSnapshot();
   });
