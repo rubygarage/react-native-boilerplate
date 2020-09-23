@@ -3,6 +3,8 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 
 import theme from 'utils/testHelpers/mockedTheme';
+import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+
 import Button from '../component';
 
 const onPress = jest.fn();
@@ -11,6 +13,8 @@ const defaultProps = {
 };
 
 describe('Button component', () => {
+  HooksTestHelper.mockUseContextImplementation(() => theme);
+
   const component = shallow(<Button {...defaultProps}><Text>Test Child</Text></Button>);
 
   it('renders correctly default', () => {

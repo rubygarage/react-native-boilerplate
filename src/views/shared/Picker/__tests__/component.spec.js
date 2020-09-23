@@ -1,8 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
+import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
 import theme from 'utils/testHelpers/mockedTheme';
+
 import Picker from '../component';
+
+jest.mock('react-intl', () => ({
+  ...jest.requireActual('react-intl'),
+  useIntl: jest.fn(() => ({ formatMessage: jest.fn() })),
+}));
+
+HooksTestHelper.mockUseContextImplementation(() => theme);
 
 describe('Picker component', () => {
   const defaultProps = {

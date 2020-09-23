@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
+import { ThemeContext } from 'styled-components';
 
 import * as S from './styled';
 
-const PaginationProgressBar = ({ isLoading, theme }) => isLoading && (
-  <S.Wrap>
-    <ActivityIndicator color={theme.colors.blue100} />
-  </S.Wrap>
-);
+const PaginationProgressBar = ({ isLoading }) => {
+  const theme = useContext(ThemeContext);
+
+  if (!isLoading) {
+    return null;
+  }
+
+  return (
+    <S.Wrap>
+      <ActivityIndicator color={theme.colors.blue100} />
+    </S.Wrap>
+  );
+};
 
 PaginationProgressBar.propTypes = {
-  theme: PropTypes.shape({ colors: PropTypes.shape().isRequired }).isRequired,
   isLoading: PropTypes.bool,
 };
 

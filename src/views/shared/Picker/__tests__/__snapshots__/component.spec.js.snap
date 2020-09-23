@@ -20,6 +20,11 @@ exports[`Picker component renders correctly closed 1`] = `
 
 exports[`Picker component renders correctly opened 1`] = `
 <SimplePicker
+  intl={
+    Object {
+      "formatMessage": [MockFunction],
+    }
+  }
   isOpen={true}
   label="value1"
   onPickerToggle={[MockFunction]}

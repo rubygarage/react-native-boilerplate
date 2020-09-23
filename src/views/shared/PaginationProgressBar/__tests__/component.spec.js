@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import theme from 'utils/testHelpers/mockedTheme';
+import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+
 import PaginationProgressBar from '../component';
 
 describe('PaginationProgressBar component', () => {
@@ -9,6 +11,9 @@ describe('PaginationProgressBar component', () => {
     isLoading: true,
     theme,
   };
+
+  HooksTestHelper.mockUseContextImplementation(() => theme);
+
   const component = shallow(<PaginationProgressBar {...defaultProps} />);
 
   it('renders correctly when loading', () => {

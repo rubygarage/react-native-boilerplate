@@ -1,36 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator, ViewPropTypes } from 'react-native';
+import { ThemeContext } from 'styled-components';
 
 import * as S from './styled';
 
 const Button = ({
   children, isOutline, isLoading, isBorder, disabled,
   isMarginRight, isMarginBottom, isSmallWidth,
-  onPress, theme, isSmallHeight, fillColor = theme.colors.blue200,
+  onPress, isSmallHeight, fillColor,
   style,
-}) => (
-  <S.Wrap
-    style={style}
-    isOutline={isOutline}
-    isBorder={isBorder}
-    isMarginRight={isMarginRight}
-    isMarginBottom={isMarginBottom}
-    isSmallWidth={isSmallWidth}
-    isSmallHeight={isSmallHeight}
-    onPress={onPress}
-    fillColor={fillColor}
-    disabled={disabled}
-  >
-    {isLoading
-      ? <ActivityIndicator size="large" color={theme.colors.white} />
-      : <S.Text isOutline={isOutline} fillColor={fillColor}>{children}</S.Text>}
-  </S.Wrap>
-);
+}) => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <S.Wrap
+      style={style}
+      isOutline={isOutline}
+      isBorder={isBorder}
+      isMarginRight={isMarginRight}
+      isMarginBottom={isMarginBottom}
+      isSmallWidth={isSmallWidth}
+      isSmallHeight={isSmallHeight}
+      onPress={onPress}
+      fillColor={fillColor || theme.colors.white}
+      disabled={disabled}
+    >
+      {isLoading
+        ? <ActivityIndicator size="large" color={theme.colors.white} />
+        : <S.Text isOutline={isOutline} fillColor={fillColor}>{children}</S.Text>}
+    </S.Wrap>
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.shape({ colors: PropTypes.shape().isRequired }).isRequired,
   onPress: PropTypes.func,
   isLoading: PropTypes.bool,
   isOutline: PropTypes.bool,

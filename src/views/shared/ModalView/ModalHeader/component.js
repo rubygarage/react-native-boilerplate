@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/Entypo';
 
-import Icon from 'views/shared/Icon';
 import * as S from './styled';
 
 const ModalHeaderComponent = ({ children, isClosable, onClose, theme }) => (
