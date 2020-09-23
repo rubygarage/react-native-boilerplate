@@ -1,18 +1,17 @@
-import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import SplashScreen from 'react-native-splash-screen';
 
-class InitialScreen extends React.Component {
-  componentDidMount() {
-    const { navigation: { navigate } } = this.props;
+const InitialScreen = ({ navigation }) => {
+  useEffect(() => {
     SplashScreen.hide();
-    navigate('Home');
-  }
+    navigation.navigate('Home');
 
-  render() {
-    return null;
-  }
-}
+    // eslint-disable-next-line
+  }, []);
+
+  return null;
+};
 
 InitialScreen.propTypes = {
   navigation: PropTypes.shape({
