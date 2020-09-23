@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'constants/theme';
 import AppModule from '../component';
 
+jest.mock('react-redux', () => ({
+  useDispatch: () => jest.fn(),
+}));
+
 describe('AppModule component', () => {
-  const defaultProps = {
-    theme,
-    handleNavRef: jest.fn(),
-  };
-  const component = shallow(<AppModule {...defaultProps} />);
+  const component = shallow(<AppModule />);
+
   it('renders correctly', () => {
     expect(component).toMatchSnapshot();
   });

@@ -1,9 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { createStore, applyMiddleware } from 'redux';
 import { createLogicMiddleware } from 'redux-logic';
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import { persistStore, persistReducer } from 'redux-persist';
 import { Settings } from 'luxon';
 import AsyncStorage from '@react-native-community/async-storage';
+import { createLogger } from 'redux-logger';
 
 import buildHttpClient from 'lib/httpClient';
 import { rootHttpClient } from 'lib/httpClient/buildHttpClient';
@@ -29,8 +31,25 @@ const configureStore = () => {
   };
 
   const logicMiddleware = createLogicMiddleware(operations, operationsDependencies);
-  const middlewares = applyMiddleware(logicMiddleware);
-  const enhancer = composeWithDevTools(middlewares);
+  let middlewares = [];
+
+  // eslint-disable-next-line
+  if (__DEV__ && !global.__TEST__) {
+    const loggerMiddleware = createLogger({
+      predicate: () => Boolean(window.navigator.userAgent),
+      collapsed: true,
+      duration: true,
+    });
+
+    middlewares = applyMiddleware(logicMiddleware, loggerMiddleware);
+  } else {
+    middlewares = applyMiddleware(logicMiddleware);
+  }
+
+  // Create enhancer.
+  const enhancer = __DEV__
+    ? composeWithDevTools(middlewares)
+    : middlewares;
 
   const store = createStore(persistedReducer, enhancer);
   const persistor = persistStore(store);

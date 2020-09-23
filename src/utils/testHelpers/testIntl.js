@@ -1,6 +1,6 @@
 import { is } from 'ramda';
 
-const formatMessage = ({ id, values }) => {
+export const formatMessage = ({ id, values }) => {
   let valuesPart = '';
   if (values) {
     valuesPart = ', values: {';
