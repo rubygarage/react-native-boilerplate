@@ -6,9 +6,9 @@ import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
 import useContainer from '../hook';
 
 describe('Alert useContainer hook', () => {
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
+  const { result } = renderHookWithProviders(() => useContainer());
 
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
@@ -16,8 +16,6 @@ describe('Alert useContainer hook', () => {
     let style = null;
 
     it('returns info style props', () => {
-      const { result } = renderHookWithProviders(() => useContainer());
-
       const { getStyleProps, theme } = result.current;
 
       act(() => {
@@ -32,8 +30,6 @@ describe('Alert useContainer hook', () => {
     });
 
     it('returns error style props', () => {
-      const { result } = renderHookWithProviders(() => useContainer());
-
       const { getStyleProps, theme } = result.current;
 
       act(() => {
@@ -48,8 +44,6 @@ describe('Alert useContainer hook', () => {
     });
 
     it('returns success style props', () => {
-      const { result } = renderHookWithProviders(() => useContainer());
-
       const { getStyleProps, theme } = result.current;
 
       act(() => {

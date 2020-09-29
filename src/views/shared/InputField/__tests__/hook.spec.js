@@ -19,15 +19,17 @@ describe('InputField useContainer hook', () => {
     },
   };
 
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
+  let result = null;
 
+  beforeEach(() => {
+    result = renderHookWithProviders(() => useContainer(props)).result;
+  });
+
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks onActionRendered method', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     const event = {
       nativeEvent: {
         layout: {
@@ -44,8 +46,6 @@ describe('InputField useContainer hook', () => {
   });
 
   it('checks onFocus method', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     act(() => {
       result.current.onFocus();
     });
@@ -55,8 +55,6 @@ describe('InputField useContainer hook', () => {
 
   it('checks onBlur method', () => {
     const event = {};
-
-    const { result } = renderHookWithProviders(() => useContainer(props));
 
     act(() => {
       result.current.onBlur(event);
@@ -68,8 +66,6 @@ describe('InputField useContainer hook', () => {
 
   describe('checks getErrorData method', () => {
     it('should return undefined', () => {
-      const { result } = renderHookWithProviders(() => useContainer(props));
-
       let errors = null;
 
       act(() => {
@@ -85,7 +81,7 @@ describe('InputField useContainer hook', () => {
   });
 
   it('should return expected values', () => {
-    const { result } = renderHookWithProviders(() => useContainer({
+    result = renderHookWithProviders(() => useContainer({
       ...props,
       form: {
         handleBlur: jest.fn(),
@@ -97,7 +93,7 @@ describe('InputField useContainer hook', () => {
           },
         },
       },
-    }));
+    })).result;
 
     let errors = null;
 

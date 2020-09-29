@@ -13,15 +13,17 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('ModalRoot useContainer hook', () => {
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
+  let result = null;
 
+  beforeEach(() => {
+    result = renderHookWithProviders(() => useContainer()).result;
+  });
+
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks onActionRendered method', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
-
     act(() => {
       result.current.onCloseModal();
     });
@@ -30,8 +32,6 @@ describe('ModalRoot useContainer hook', () => {
   });
 
   it('checks onDestroyModal method', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
-
     act(() => {
       result.current.onDestroyModal();
     });

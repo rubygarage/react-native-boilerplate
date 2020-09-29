@@ -22,15 +22,13 @@ describe('doAnimationHook', () => {
     lifetime: null,
   };
 
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
+  let { result } = renderHookWithProviders(() => useContainer(props));
 
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks onHideFlash method', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     act(() => {
       result.current.onHideFlash();
     });
@@ -42,8 +40,6 @@ describe('doAnimationHook', () => {
   it('checks onActionClick method', () => {
     mockedDispatch.mockClear();
 
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     act(() => {
       result.current.onActionClick();
     });
@@ -54,8 +50,16 @@ describe('doAnimationHook', () => {
   });
 
   describe('checks didMount method', () => {
+    it('should not call setInterval', () => {
+      act(() => {
+        result.current.didMount();
+      });
+
+      expect(setInterval).not.toHaveBeenCalledWith();
+    });
+
     it('should call setInterval', () => {
-      const { result } = renderHookWithProviders(() => useContainer({ ...props, lifetime: 1000 }));
+      result = renderHookWithProviders(() => useContainer({ ...props, lifetime: 1000 })).result;
 
       let unMountingCallback = null;
 
@@ -68,16 +72,6 @@ describe('doAnimationHook', () => {
       unMountingCallback();
 
       expect(clearInterval).toHaveBeenCalled();
-    });
-
-    it('should not call setInterval', () => {
-      const { result } = renderHookWithProviders(() => useContainer(props));
-
-      act(() => {
-        result.current.didMount();
-      });
-
-      expect(setInterval).not.toHaveBeenCalledWith();
     });
   });
 });

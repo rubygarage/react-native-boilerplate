@@ -18,19 +18,18 @@ describe('ConfirmModal useContainer hook', () => {
     confirmAction: {},
   };
 
+  let result = null;
+
   beforeEach(() => {
     jest.clearAllMocks();
+    result = renderHookWithProviders(() => useContainer(props)).result;
   });
 
   it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks handleShouldConfirm method', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     act(() => {
       result.current.handleShouldConfirm();
     });
@@ -41,8 +40,6 @@ describe('ConfirmModal useContainer hook', () => {
 
   describe('checks onModalHide method', () => {
     it('should dispatch and destroy modal', () => {
-      const { result } = renderHookWithProviders(() => useContainer(props));
-
       act(() => { result.current.setShouldConfirm(true); });
 
       act(() => { result.current.onModalHide(); });
@@ -52,8 +49,6 @@ describe('ConfirmModal useContainer hook', () => {
     });
 
     it('should only destroy modal', () => {
-      const { result } = renderHookWithProviders(() => useContainer(props));
-
       act(() => { result.current.setShouldConfirm(false); });
 
       act(() => { result.current.onModalHide(); });

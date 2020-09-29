@@ -15,15 +15,13 @@ jest.mock('react-native', () => {
 });
 
 describe('FlashRoot useContainer hook', () => {
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
+  const { result } = renderHookWithProviders(() => useContainer());
 
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks doAnimation method', () => {
-    const { result } = renderHookWithProviders(() => useContainer());
-
     LayoutAnimation.configureNext.mockReset();
 
     act(() => {
@@ -50,8 +48,6 @@ describe('FlashRoot useContainer hook', () => {
 
   describe('checks didMount method', () => {
     it('should call setLayoutAnimationEnabledExperimental', () => {
-      const { result } = renderHookWithProviders(() => useContainer());
-
       act(() => {
         result.current.didMount();
       });
@@ -61,8 +57,6 @@ describe('FlashRoot useContainer hook', () => {
 
     it('should not call setLayoutAnimationEnabledExperimental', () => {
       UIManager.setLayoutAnimationEnabledExperimental = null;
-
-      const { result } = renderHookWithProviders(() => useContainer());
 
       act(() => {
         result.current.didMount();

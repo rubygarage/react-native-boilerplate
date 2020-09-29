@@ -16,15 +16,13 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('InitialScreen useContainer hook', () => {
-  it('matches snapshot', () => {
-    const { result } = renderHook(() => useContainer());
+  const { result } = renderHook(() => useContainer());
 
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   it('checks didMount method', () => {
-    const { result } = renderHook(() => useContainer());
-
     act(() => {
       result.current.didMount();
     });

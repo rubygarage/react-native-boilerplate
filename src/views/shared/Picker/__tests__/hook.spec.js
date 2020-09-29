@@ -17,16 +17,18 @@ describe('Picker useContainer hook', () => {
     onValueChange: jest.fn(),
   };
 
-  it('matches snapshot', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
+  let result = null;
 
+  beforeEach(() => {
+    result = renderHookWithProviders(() => useContainer(props)).result;
+  });
+
+  it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
   describe('checks detectLabel method', () => {
     it('should return right label', () => {
-      const { result } = renderHookWithProviders(() => useContainer(props));
-
       let label = null;
 
       act(() => {
@@ -37,10 +39,10 @@ describe('Picker useContainer hook', () => {
     });
 
     it('should return right label', () => {
-      const { result } = renderHookWithProviders(() => useContainer({
+      result = renderHookWithProviders(() => useContainer({
         ...props,
         selectedValue: 'test1',
-      }));
+      })).result;
 
       let label = null;
 
@@ -52,10 +54,10 @@ describe('Picker useContainer hook', () => {
     });
 
     it('should return undefined', () => {
-      const { result } = renderHookWithProviders(() => useContainer({
+      result = renderHookWithProviders(() => useContainer({
         ...props,
         selectedValue: 'some',
-      }));
+      })).result;
 
       let label = null;
 
@@ -68,8 +70,6 @@ describe('Picker useContainer hook', () => {
   });
 
   it('checks handlePickerToggle method', () => {
-    const { result } = renderHookWithProviders(() => useContainer(props));
-
     act(() => {
       result.current.handlePickerToggle();
     });
@@ -85,8 +85,6 @@ describe('Picker useContainer hook', () => {
 
   it('checks handleValueChange method', () => {
     const value = 'test';
-
-    const { result } = renderHookWithProviders(() => useContainer(props));
 
     act(() => {
       result.current.handleValueChange(value);
