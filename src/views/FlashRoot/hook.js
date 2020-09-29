@@ -25,18 +25,15 @@ const useContainer = () => {
     });
   };
 
-  const didMount = () => {
+  useEffect(() => {
     if (UIManager.setLayoutAnimationEnabledExperimental) {
       UIManager.setLayoutAnimationEnabledExperimental(true);
     }
-  };
-
-  useEffect(didMount, []);
+  }, []);
 
   useEffect(doAnimation, [flashes.length]);
 
   return {
-    didMount,
     doAnimation,
   };
 };

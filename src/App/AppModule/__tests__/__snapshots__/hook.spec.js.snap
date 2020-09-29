@@ -2,7 +2,6 @@
 
 exports[`useContainer matches snapshot 1`] = `
 Object {
-  "didMount": [Function],
   "handleAppStateChange": [Function],
 }
 `;

@@ -22,24 +22,18 @@ const useContainer = () => {
     }
   };
 
-  /**
-   * Did mount.
-   */
-  const didMount = () => {
+  // Did mount
+  useEffect(() => {
     dispatch(startListenConnectionState());
     AppState.addEventListener('change', handleAppStateChange);
 
     return () => {
       AppState.removeEventListener('change', handleAppStateChange);
     };
-  };
-
-  // Did mount
-  useEffect(didMount, []);
+  }, []);
 
   return {
     handleAppStateChange,
-    didMount,
   };
 };
 

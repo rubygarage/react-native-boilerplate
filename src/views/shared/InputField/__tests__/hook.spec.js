@@ -22,7 +22,7 @@ describe('InputField useContainer hook', () => {
   let result = null;
 
   beforeEach(() => {
-    result = renderHookWithProviders(() => useContainer(props)).result;
+    ({ result } = renderHookWithProviders(() => useContainer(props)));
   });
 
   it('matches snapshot', () => {

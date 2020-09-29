@@ -22,7 +22,7 @@ describe('ConfirmModal useContainer hook', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    result = renderHookWithProviders(() => useContainer(props)).result;
+    ({ result } = renderHookWithProviders(() => useContainer(props)));
   });
 
   it('matches snapshot', () => {

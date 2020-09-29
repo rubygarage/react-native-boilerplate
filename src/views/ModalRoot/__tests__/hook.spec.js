@@ -16,7 +16,7 @@ describe('ModalRoot useContainer hook', () => {
   let result = null;
 
   beforeEach(() => {
-    result = renderHookWithProviders(() => useContainer()).result;
+    ({ result } = renderHookWithProviders(useContainer));
   });
 
   it('matches snapshot', () => {

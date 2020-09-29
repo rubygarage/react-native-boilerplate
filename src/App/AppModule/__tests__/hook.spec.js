@@ -17,7 +17,12 @@ jest.spyOn(AppState, 'removeEventListener');
 describe('useContainer', () => {
   reactRedux.useDispatch = () => dispatch;
 
-  const { result } = renderHook(() => useContainer());
+  let result = null;
+  let unmount = null;
+
+  beforeEach(() => {
+    ({ result, unmount } = renderHook(useContainer));
+  });
 
   it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
@@ -25,22 +30,12 @@ describe('useContainer', () => {
 
   describe('Lifecycle', () => {
     it('checks mounting', () => {
-      act(() => {
-        result.current.didMount();
-      });
-
       expect(dispatch).toHaveBeenCalledWith(startListenConnectionState());
       expect(AppState.addEventListener).toHaveBeenCalledWith('change', result.current.handleAppStateChange);
     });
 
     it('checks unmounting', () => {
-      let unMountCallback = null;
-
-      act(() => {
-        unMountCallback = result.current.didMount();
-      });
-
-      unMountCallback();
+      unmount();
 
       expect(AppState.removeEventListener).toHaveBeenCalledWith('change', result.current.handleAppStateChange);
     });

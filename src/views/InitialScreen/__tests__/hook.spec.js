@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react-hooks';
 import SplashScreen from 'react-native-splash-screen';
 
 import useContainer from '../hook';
@@ -16,17 +16,17 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 describe('InitialScreen useContainer hook', () => {
-  const { result } = renderHook(() => useContainer());
+  let result = null;
+
+  beforeEach(() => {
+    ({ result } = renderHook(useContainer));
+  });
 
   it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
   });
 
-  it('checks didMount method', () => {
-    act(() => {
-      result.current.didMount();
-    });
-
+  it('checks mounting', () => {
     expect(mockedNavigate).toHaveBeenCalledWith('Home');
     expect(SplashScreen.hide).toHaveBeenCalled();
   });

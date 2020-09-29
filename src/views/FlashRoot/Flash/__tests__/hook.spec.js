@@ -22,7 +22,7 @@ describe('doAnimationHook', () => {
     lifetime: null,
   };
 
-  let { result } = renderHookWithProviders(() => useContainer(props));
+  let { result, unmount } = renderHookWithProviders(() => useContainer(props));
 
   it('matches snapshot', () => {
     expect(result.current).toMatchSnapshot();
@@ -49,27 +49,25 @@ describe('doAnimationHook', () => {
     expect(mockedDispatch).toHaveBeenNthCalledWith(2, { type: 'TEST' });
   });
 
-  describe('checks didMount method', () => {
-    it('should not call setInterval', () => {
-      act(() => {
-        result.current.didMount();
-      });
-
+  describe('Lifecycle', () => {
+    it('mounting - should not call setInterval', () => {
       expect(setInterval).not.toHaveBeenCalledWith();
     });
 
-    it('should call setInterval', () => {
+    it('mounting - should call setInterval', () => {
       result = renderHookWithProviders(() => useContainer({ ...props, lifetime: 1000 })).result;
-
-      let unMountingCallback = null;
-
-      act(() => {
-        unMountingCallback = result.current.didMount();
-      });
 
       expect(setInterval).toHaveBeenCalledWith(result.current.onHideFlash, 1000);
 
-      unMountingCallback();
+      expect(clearInterval).toHaveBeenCalled();
+    });
+
+    it('checks cleanup callbacks', () => {
+      ({ result, unmount } = renderHookWithProviders(
+        () => useContainer({ ...props, lifetime: 1000 }),
+      ));
+
+      unmount();
 
       expect(clearInterval).toHaveBeenCalled();
     });

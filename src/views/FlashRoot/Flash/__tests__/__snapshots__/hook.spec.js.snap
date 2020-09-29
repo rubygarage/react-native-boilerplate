@@ -2,7 +2,6 @@
 
 exports[`doAnimationHook matches snapshot 1`] = `
 Object {
-  "didMount": [Function],
   "onActionClick": [Function],
   "onHideFlash": [Function],
 }

@@ -25,7 +25,7 @@ const useContainer = (props) => {
     dispatch(action);
   };
 
-  const didMount = () => {
+  useEffect(() => {
     if (lifetime) {
       timerHandle.current = setInterval(onHideFlash, lifetime);
     }
@@ -33,14 +33,11 @@ const useContainer = (props) => {
     return () => {
       clearInterval(timerHandle.current);
     };
-  };
-
-  useEffect(didMount, []);
+  }, []);
 
   return {
     onHideFlash,
     onActionClick,
-    didMount,
   };
 };
 

@@ -5,19 +5,13 @@ import { useNavigation } from '@react-navigation/native';
 const useContainer = () => {
   const navigation = useNavigation();
 
-  /**
-   * Mounting
-   */
-  const didMount = () => {
+  useEffect(() => {
     SplashScreen.hide();
     navigation.navigate('Home');
-  };
-
-  useEffect(didMount, []);
+  }, []);
 
   return {
     navigation,
-    didMount,
   };
 };
 

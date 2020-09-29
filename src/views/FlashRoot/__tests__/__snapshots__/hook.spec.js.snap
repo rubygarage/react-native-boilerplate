@@ -2,7 +2,6 @@
 
 exports[`FlashRoot useContainer hook matches snapshot 1`] = `
 Object {
-  "didMount": [Function],
   "doAnimation": [Function],
 }
 `;

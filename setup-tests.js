@@ -3,7 +3,6 @@ import 'react-native';
 import 'jest-enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
-import enableHooks from 'jest-react-hooks-shallow';
 
 const append = jest.fn();
 global.FormData = () => ({ append });
@@ -69,5 +68,3 @@ global.timeTravel = (time = frameTime) => {
     tickTravel();
   }
 };
-
-enableHooks(jest);
