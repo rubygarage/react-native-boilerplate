@@ -2,28 +2,28 @@
 
 exports[`Alert component renders correctly closable 1`] = `
 <Styled(View)
-  color="[mocked blue50]"
+  color="#ededed"
   onCloseClick={[MockFunction]}
 >
   <Styled(View)>
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
-      name="info"
+      color="#acacac"
+      name="switch-camera"
       size={28}
     />
   </Styled(View)>
   <Styled(View)>
     <Text>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="title_id"
         />
       </Styled(Text)>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="subtitle_id"
@@ -31,7 +31,7 @@ exports[`Alert component renders correctly closable 1`] = `
       </Styled(Text)>
     </Text>
     <Styled(Text)
-      color="[mocked blue500]"
+      color="#acacac"
     >
       <FormattedMessage
         id="message_id"
@@ -43,7 +43,7 @@ exports[`Alert component renders correctly closable 1`] = `
   >
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
+      color="#acacac"
       name="cross"
       size={28}
     />
@@ -53,27 +53,27 @@ exports[`Alert component renders correctly closable 1`] = `
 
 exports[`Alert component renders correctly default 1`] = `
 <Styled(View)
-  color="[mocked blue50]"
+  color="#ededed"
 >
   <Styled(View)>
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
-      name="info"
+      color="#acacac"
+      name="switch-camera"
       size={28}
     />
   </Styled(View)>
   <Styled(View)>
     <Text>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="title_id"
         />
       </Styled(Text)>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="subtitle_id"
@@ -81,7 +81,7 @@ exports[`Alert component renders correctly default 1`] = `
       </Styled(Text)>
     </Text>
     <Styled(Text)
-      color="[mocked blue500]"
+      color="#acacac"
     >
       <FormattedMessage
         id="message_id"
@@ -93,28 +93,28 @@ exports[`Alert component renders correctly default 1`] = `
 
 exports[`Alert component renders correctly with action button 1`] = `
 <Styled(View)
-  color="[mocked blue50]"
+  color="#ededed"
   onCloseClick={[MockFunction]}
 >
   <Styled(View)>
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
-      name="info"
+      color="#acacac"
+      name="switch-camera"
       size={28}
     />
   </Styled(View)>
   <Styled(View)>
     <Text>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="title_id"
         />
       </Styled(Text)>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="subtitle_id"
@@ -122,14 +122,14 @@ exports[`Alert component renders correctly with action button 1`] = `
       </Styled(Text)>
     </Text>
     <Styled(Text)
-      color="[mocked blue500]"
+      color="#acacac"
     >
       <FormattedMessage
         id="message_id"
       />
     </Styled(Text)>
     <Styled(Component)
-      color="[mocked blue500]"
+      color="#acacac"
       onPress={[MockFunction]}
     >
       <Styled(Icon)
@@ -149,7 +149,7 @@ exports[`Alert component renders correctly with action button 1`] = `
   >
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
+      color="#acacac"
       name="cross"
       size={28}
     />
@@ -159,31 +159,31 @@ exports[`Alert component renders correctly with action button 1`] = `
 
 exports[`Alert component renders correctly with string data 1`] = `
 <Styled(View)
-  color="[mocked blue50]"
+  color="#ededed"
 >
   <Styled(View)>
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
-      name="info"
+      color="#acacac"
+      name="switch-camera"
       size={28}
     />
   </Styled(View)>
   <Styled(View)>
     <Text>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         test title
       </Styled(Text)>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         test title
       </Styled(Text)>
     </Text>
     <Styled(Text)
-      color="[mocked blue500]"
+      color="#acacac"
     >
       test message
     </Styled(Text)>
@@ -193,20 +193,20 @@ exports[`Alert component renders correctly with string data 1`] = `
 
 exports[`Alert component renders correctly without subtitle 1`] = `
 <Styled(View)
-  color="[mocked blue50]"
+  color="#ededed"
 >
   <Styled(View)>
     <Icon
       allowFontScaling={false}
-      color="[mocked blue500]"
-      name="info"
+      color="#acacac"
+      name="switch-camera"
       size={28}
     />
   </Styled(View)>
   <Styled(View)>
     <Text>
       <Styled(Text)
-        color="[mocked blue500]"
+        color="#acacac"
       >
         <FormattedMessage
           id="title_id"
@@ -214,7 +214,7 @@ exports[`Alert component renders correctly without subtitle 1`] = `
       </Styled(Text)>
     </Text>
     <Styled(Text)
-      color="[mocked blue500]"
+      color="#acacac"
     >
       <FormattedMessage
         id="message_id"

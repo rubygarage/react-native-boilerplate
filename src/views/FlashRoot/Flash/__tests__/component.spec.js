@@ -1,14 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
-
 import Flash from '../component';
-import * as useFlashMethods from '../hooks/useFlashMethods';
 
 jest.useFakeTimers();
 
-HooksTestHelper.mockUseDispatchImplementation(() => jest.fn());
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: () => ({
+    onHideFlash: jest.fn(),
+    onActionClick: jest.fn(),
+  }),
+}));
 
 describe('Flash component', () => {
   const props = {
@@ -22,14 +25,6 @@ describe('Flash component', () => {
     },
     lifetime: null,
   };
-
-  const onHideFlash = jest.fn();
-  const onActionClick = jest.fn();
-
-  useFlashMethods.default = () => ({
-    onHideFlash,
-    onActionClick,
-  });
 
   const component = shallow(<Flash {...props} />);
 

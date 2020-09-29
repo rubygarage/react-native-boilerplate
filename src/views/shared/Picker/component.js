@@ -1,31 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
-import { useIntl } from 'react-intl';
 
 import Icon from 'views/shared/Icon';
 
-import usePickerState from './hooks/usePickerState';
 import SimplePicker from './SimplePicker';
 import * as S from './styled';
+import useContainer from './hook';
 
 const PickerComponent = (props) => {
   const { onPickerToggle, isOpen, label } = props;
 
-  const theme = useContext(ThemeContext);
-  const intl = useIntl();
-
-  const extendedProps = {
-    ...props,
-    theme,
-    intl,
-  };
-
-  usePickerState(extendedProps);
+  const { theme, intl } = useContainer(props);
 
   if (isOpen) {
-    return <SimplePicker {...extendedProps} />;
+    return <SimplePicker {...props} theme={theme} intl={intl} />;
   }
 
   return (

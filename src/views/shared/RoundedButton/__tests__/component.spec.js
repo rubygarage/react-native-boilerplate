@@ -1,14 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
 
 import RoundedButton from '../component';
 
 const defaultProps = { iconName: 'video-off', isActive: true, onPress: jest.fn() };
 
-HooksTestHelper.mockUseContextImplementation(() => theme);
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    theme: mockedTheme,
+  })),
+}));
 
 describe('RoundedButton container', () => {
   const component = shallow(<RoundedButton {...defaultProps} />);

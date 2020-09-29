@@ -7,10 +7,10 @@ import theme from 'constants/theme';
 import AppNavigator from '../navigation/AppNavigator';
 import ModalRoot from '../../views/ModalRoot';
 
-import useAppModuleHook from './hooks/useAppModuleHook';
+import useContainer from './hook';
 
 const AppModuleComponent = () => {
-  useAppModuleHook();
+  useContainer();
 
   return (
     <ThemeProvider theme={theme}>

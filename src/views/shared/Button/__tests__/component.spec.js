@@ -2,19 +2,21 @@ import React from 'react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
 
 import Button from '../component';
 
 const onPress = jest.fn();
 const defaultProps = {
-  onPress, isLoading: false, isSmall: undefined, isOutline: undefined, theme,
+  onPress, isLoading: false, isSmall: undefined, isOutline: undefined,
 };
 
-describe('Button component', () => {
-  HooksTestHelper.mockUseContextImplementation(() => theme);
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({ theme: mockedTheme })),
+}));
 
+describe('Button component', () => {
   const component = shallow(<Button {...defaultProps}><Text>Test Child</Text></Button>);
 
   it('renders correctly default', () => {
@@ -47,7 +49,7 @@ describe('Button component', () => {
       isSmall: true,
       isOutline: true,
       isMargin: true,
-      fillColor: theme.colors.green500,
+      fillColor: mockedTheme.colors.green500,
     };
     component.setProps(props);
     expect(component).toMatchSnapshot();

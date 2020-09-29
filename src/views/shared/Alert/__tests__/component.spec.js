@@ -1,24 +1,30 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { ALERT_TYPES } from 'constants/alert';
-import theme from 'utils/testHelpers/mockedTheme';
-import testIntl from 'utils/testHelpers/testIntl';
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
 
-import Alert, { getStyleProps } from '../component';
+import Alert from '../component';
 
 const defaultProps = {
   title: { id: 'title_id' },
   subtitle: { id: 'subtitle_id' },
   message: { id: 'message_id' },
-  intl: testIntl,
   type: 'info',
 };
 
-describe('Alert component', () => {
-  HooksTestHelper.mockUseContextImplementation(() => theme);
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    theme: mockedTheme,
+    getStyleProps: jest.fn(() => ({
+      backgroundColor: '#ededed',
+      iconName: 'switch-camera',
+      contentColor: '#acacac',
+    })),
+  })),
+}));
 
+describe('Alert component', () => {
   const component = shallow(<Alert {...defaultProps} />);
 
   it('renders correctly default', () => {
@@ -63,31 +69,5 @@ describe('Alert component', () => {
     };
     component.setProps(props);
     expect(component).toMatchSnapshot();
-  });
-
-  describe('getStyleProps', () => {
-    it('returns info style props', () => {
-      expect(getStyleProps(ALERT_TYPES.info, theme)).toEqual({
-        contentColor: theme.colors.blue500,
-        backgroundColor: theme.colors.blue50,
-        iconName: 'info',
-      });
-    });
-
-    it('returns error style props', () => {
-      expect(getStyleProps(ALERT_TYPES.error, theme)).toEqual({
-        contentColor: theme.colors.red500,
-        backgroundColor: theme.colors.red50,
-        iconName: 'close',
-      });
-    });
-
-    it('returns success style props', () => {
-      expect(getStyleProps(ALERT_TYPES.success, theme)).toEqual({
-        contentColor: theme.colors.green500,
-        backgroundColor: theme.colors.green50,
-        iconName: 'tick',
-      });
-    });
   });
 });

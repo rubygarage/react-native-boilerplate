@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationProgressBar useContainer hook matches snapshot 1`] = `
+Object {
+  "theme": Object {
+    "colors": null,
+    "fonts": null,
+    "sizes": null,
+    "type": "Mocked theme",
+  },
+}
+`;

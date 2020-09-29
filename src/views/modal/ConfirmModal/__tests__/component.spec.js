@@ -1,16 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
 
 import ConfirmModal from '../component';
 
-jest.mock('react-redux', () => ({
-  useDispatch: jest.fn(),
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    handleShouldConfirm: jest.fn(),
+    onModalHide: jest.fn(),
+    setShouldConfirm: jest.fn(),
+    isShouldConfirm: true,
+    theme: mockedTheme,
+  })),
 }));
-
-HooksTestHelper.mockUseContextImplementation(() => theme);
 
 describe('ConfirmModal component', () => {
   const defaultProps = {

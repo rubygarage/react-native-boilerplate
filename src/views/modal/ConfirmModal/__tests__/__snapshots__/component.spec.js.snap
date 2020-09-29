@@ -3,16 +3,16 @@
 exports[`ConfirmModal component renders correctly default 1`] = `
 <ModalView
   isVisible={true}
-  onModalHide={[Function]}
+  onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)
+  <ModalHeaderComponent
     isClosable={true}
     onClose={[MockFunction]}
   >
     <FormattedMessage
       id="test_title_id"
     />
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)
       key="test_body_1"
@@ -67,16 +67,16 @@ exports[`ConfirmModal component renders correctly default 1`] = `
 exports[`ConfirmModal component renders correctly with default dismiss button 1`] = `
 <ModalView
   isVisible={true}
-  onModalHide={[Function]}
+  onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)
+  <ModalHeaderComponent
     isClosable={true}
     onClose={[MockFunction]}
   >
     <FormattedMessage
       id="test_title_id"
     />
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)
       key="test_body_1"

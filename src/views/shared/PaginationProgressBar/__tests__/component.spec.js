@@ -1,18 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
 
 import PaginationProgressBar from '../component';
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    theme: mockedTheme,
+  })),
+}));
 
 describe('PaginationProgressBar component', () => {
   const defaultProps = {
     isLoading: true,
-    theme,
   };
-
-  HooksTestHelper.mockUseContextImplementation(() => theme);
 
   const component = shallow(<PaginationProgressBar {...defaultProps} />);
 

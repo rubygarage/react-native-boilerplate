@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashRoot useContainer hook matches snapshot 1`] = `
+Object {
+  "didMount": [Function],
+  "doAnimation": [Function],
+}
+`;

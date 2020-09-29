@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitialScreen useContainer hook matches snapshot 1`] = `
+Object {
+  "didMount": [Function],
+  "navigation": Object {
+    "navigate": [MockFunction] {
+      "calls": Array [
+        Array [
+          "Home",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    },
+  },
+}
+`;

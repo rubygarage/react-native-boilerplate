@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`doAnimationHook matches snapshot 1`] = `
-Object {
-  "doAnimation": [Function],
-}
-`;

@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage, useIntl } from 'react-intl';
-import { ThemeContext } from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 import Icon from 'views/shared/Icon';
 import Button from 'views/shared/Button';
 
-import useInputState from './hooks/useInputState';
+import useContainer from './hook';
 import * as S from './styled';
 
 const InputFieldComponent = (props) => {
@@ -19,9 +18,6 @@ const InputFieldComponent = (props) => {
     form: { handleChange },
   } = props;
 
-  const intl = useIntl();
-  const theme = useContext(ThemeContext);
-
   const {
     isFocused,
     actionWidth,
@@ -29,7 +25,9 @@ const InputFieldComponent = (props) => {
     onFocus,
     onBlur,
     getErrorData,
-  } = useInputState(props);
+    theme,
+    intl,
+  } = useContainer(props);
 
   const { errorId, errorValues, errorIcon } = getErrorData();
 

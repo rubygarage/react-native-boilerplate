@@ -2,24 +2,7 @@
 
 exports[`FlashRoot component renders correct item 1`] = `
 <Flash
-  doAnimation={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-        Array [],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
+  doAnimation={[MockFunction]}
   flashProps={Object {}}
   id="0"
   message="test_message"

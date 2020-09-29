@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
 
 import * as S from './styled';
+import useContainer from './hook';
 
 const PaginationProgressBar = ({ isLoading }) => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContainer();
 
   if (!isLoading) {
     return null;

@@ -3,9 +3,7 @@ import { shallow } from 'enzyme';
 
 import AppModule from '../component';
 
-jest.mock('react-redux', () => ({
-  useDispatch: () => jest.fn(),
-}));
+jest.mock('../hook');
 
 describe('AppModule component', () => {
   const component = shallow(<AppModule />);

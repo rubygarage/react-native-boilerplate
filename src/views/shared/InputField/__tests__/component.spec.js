@@ -1,13 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as ReactIntl from 'react-intl';
 
-import HooksTestHelper from 'utils/testHelpers/hooksTestHelper';
-import { formatMessage } from 'utils/testHelpers/testIntl';
-import theme from 'utils/testHelpers/mockedTheme';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+import mockedIntl from 'utils/testHelpers/testIntl';
 
-import useInputState from '../hooks/useInputState';
 import InputField from '../component';
+import * as useContainer from '../hook';
 
 const defaultProps = {
   labelId: 'label_id',
@@ -23,7 +21,7 @@ const defaultProps = {
   field: { name: 'testName', value: 'value' },
 };
 
-jest.mock('../hooks/useInputState', () => ({
+jest.mock('../hook', () => ({
   __esModule: true,
   default: jest.fn(() => ({
     isFocused: true,
@@ -32,21 +30,12 @@ jest.mock('../hooks/useInputState', () => ({
     onFocus: jest.fn(),
     onBlur: jest.fn(),
     getErrorData: jest.fn(() => ({ })),
+    intl: mockedIntl,
+    theme: mockedTheme,
   })),
 }));
 
-jest.mock('react-intl', () => ({
-  ...jest.requireActual('react-intl'),
-  useIntl: jest.fn(() => ({ formatMessage: jest.fn() })),
-}));
-
-HooksTestHelper.mockUseContextImplementation(() => theme);
-
 describe('InputField component', () => {
-  ReactIntl.useIntl.mockImplementation(() => ({
-    formatMessage,
-  }));
-
   const component = shallow(<InputField {...defaultProps} />);
 
   it('renders correctly default', () => {
@@ -73,8 +62,10 @@ describe('InputField component', () => {
   });
 
   it('renders correctly with error', () => {
-    useInputState.mockImplementation(() => ({
+    useContainer.default.mockImplementation(() => ({
       getErrorData: jest.fn(() => ({ errorId: 'test_id' })),
+      intl: mockedIntl,
+      theme: mockedTheme,
     }));
 
     const withError = shallow(<InputField {...defaultProps} />);

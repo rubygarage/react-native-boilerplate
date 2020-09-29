@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator, ViewPropTypes } from 'react-native';
-import { ThemeContext } from 'styled-components';
 
 import * as S from './styled';
+import useContainer from './hook';
 
 const Button = ({
   children, isOutline, isLoading, isBorder, disabled,
@@ -11,7 +11,7 @@ const Button = ({
   onPress, isSmallHeight, fillColor,
   style,
 }) => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContainer();
 
   return (
     <S.Wrap

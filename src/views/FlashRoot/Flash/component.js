@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import Alert from 'views/shared/Alert';
 
-import useFlashMethods from './hooks/useFlashMethods';
+import useContainer from './hook';
 
 const Flash = (props) => {
   const { flashProps } = props;
 
-  const { onHideFlash, onActionClick } = useFlashMethods(props);
+  const { onHideFlash, onActionClick } = useContainer(props);
 
   return (
     <Alert

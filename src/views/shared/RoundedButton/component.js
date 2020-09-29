@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
 
 import Icon from 'views/shared/Icon';
+
 import * as S from './styled';
+import useContainer from './hook';
 
 const RoundedButton = ({
   iconName, iconNameActive = iconName, isActive, onPress,
 }) => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContainer();
 
   const name = isActive ? iconNameActive : iconName;
   const color = isActive ? theme.colors.white : theme.colors.grey700;

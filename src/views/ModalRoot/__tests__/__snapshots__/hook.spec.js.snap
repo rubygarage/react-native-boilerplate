@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalRoot useContainer hook matches snapshot 1`] = `
+Object {
+  "isVisible": true,
+  "modalProps": Object {},
+  "modalType": null,
+  "onCloseModal": [Function],
+  "onDestroyModal": [Function],
+  "setIsVisible": [Function],
+}
+`;

@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { ThemeContext } from 'styled-components';
 
 import ModalView from 'views/shared/ModalView';
 import ModalHeader from 'views/shared/ModalView/ModalHeader';
@@ -10,18 +9,17 @@ import ModalFooter from 'views/shared/ModalView/ModalFooter';
 import ModalText from 'views/shared/ModalView/ModalText';
 import Button from 'views/shared/Button';
 
-import useConfirmModalState from './hooks/useConfirmModalState';
+import useContainer from './hook';
 
 const ConfirmModalComponent = ({
   isVisible, onCloseModal, title, body, confirm,
   dismiss, onDestroyModal, confirmAction,
 }) => {
-  const theme = useContext(ThemeContext);
-
   const {
     onModalHide,
     onShouldConfirm,
-  } = useConfirmModalState({
+    theme,
+  } = useContainer({
     onDestroyModal,
     onCloseModal,
     confirmAction,

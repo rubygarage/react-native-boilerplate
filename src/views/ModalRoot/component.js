@@ -1,20 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
-import { modalTypeSelector, modalPropsSelector } from 'state/modal/selectors';
 
 import MODAL_COMPONENTS from './modalComponents';
-import useModalVisibility from './hooks/useModalVisibility';
+import useContainer from './hook';
 
 const ModalRoot = () => {
-  const modalType = useSelector(modalTypeSelector);
-  const modalProps = useSelector(modalPropsSelector);
-
   const {
+    modalType,
+    modalProps,
     isVisible,
     onCloseModal,
     onDestroyModal,
-  } = useModalVisibility();
+  } = useContainer();
 
   if (!modalType) {
     return null;

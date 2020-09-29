@@ -1,32 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
-import { UIManager } from 'react-native';
-
-import { flashesSelector } from 'state/flash/selectors';
 
 import Flash from './Flash';
 import * as S from './styled';
-import doAnimationHook from './hooks/doAnimationHook';
+import useContainer from './hook';
 
 const keyExtractor = (item) => item.id;
 
 const FlashRootComponent = ({ topInset }) => {
-  const flashes = useSelector(flashesSelector);
-
-  const { doAnimation } = doAnimationHook();
-
-  useEffect(() => {
-    if (UIManager.setLayoutAnimationEnabledExperimental) {
-      UIManager.setLayoutAnimationEnabledExperimental(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    doAnimation();
-
-    // eslint-disable-next-line
-  }, [flashes.length]);
+  const { flashes, doAnimation } = useContainer();
 
   return (
     <S.List

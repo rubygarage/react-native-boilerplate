@@ -5,9 +5,11 @@ exports[`InfoModal component renders correctly default 1`] = `
   isVisible={true}
   onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)>
+  <ModalHeaderComponent
+    isClosable={false}
+  >
     test title
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)>
       test detail

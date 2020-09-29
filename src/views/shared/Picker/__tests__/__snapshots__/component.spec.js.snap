@@ -22,7 +22,7 @@ exports[`Picker component renders correctly opened 1`] = `
 <SimplePicker
   intl={
     Object {
-      "formatMessage": [MockFunction],
+      "formatMessage": [Function],
     }
   }
   isOpen={true}
