@@ -7,9 +7,7 @@ import PaginationProgressBar from '../component';
 
 jest.mock('../hook', () => ({
   __esModule: true,
-  default: jest.fn(() => ({
-    theme: mockedTheme,
-  })),
+  default: jest.fn(() => mockedTheme),
 }));
 
 describe('PaginationProgressBar component', () => {

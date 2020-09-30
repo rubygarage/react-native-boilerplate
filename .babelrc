@@ -5,7 +5,10 @@
       {
         "root": [
           "./src"
-        ]
+        ],
+        "alias": {
+          "mocks": "./__mocks__"
+        }
       }
     ]
   ]

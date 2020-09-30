@@ -10,7 +10,7 @@ jest.mock('../hook', () => ({
   __esModule: true,
   default: jest.fn(() => ({
     modalType: 'MY_MODAL',
-    modalProps: {},
+    modalProps: { customProp: 'customProp' },
     isVisible: true,
     onCloseModal: jest.fn(),
     onDestroyModal: jest.fn(),

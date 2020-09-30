@@ -6,7 +6,7 @@ import * as S from './styled';
 import useContainer from './hook';
 
 const ModalHeaderComponent = ({ children, isClosable, onClose }) => {
-  const { theme } = useContainer();
+  const theme = useContainer();
 
   return (
     <S.Wrap>

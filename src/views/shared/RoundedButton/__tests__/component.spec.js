@@ -9,9 +9,7 @@ const defaultProps = { iconName: 'video-off', isActive: true, onPress: jest.fn()
 
 jest.mock('../hook', () => ({
   __esModule: true,
-  default: jest.fn(() => ({
-    theme: mockedTheme,
-  })),
+  default: jest.fn(() => mockedTheme),
 }));
 
 describe('RoundedButton container', () => {

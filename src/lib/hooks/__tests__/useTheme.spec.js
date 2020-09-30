@@ -1,11 +1,11 @@
 import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
 
-import useContainer from '../hook';
+import useTheme from '../useTheme';
 
-describe('Alert useContainer hook', () => {
-  const { result } = renderHookWithProviders(useContainer);
-
+describe('useTheme common hook', () => {
   it('matches snapshot', () => {
+    const { result } = renderHookWithProviders(useTheme);
+
     expect(result.current).toMatchSnapshot();
   });
 });

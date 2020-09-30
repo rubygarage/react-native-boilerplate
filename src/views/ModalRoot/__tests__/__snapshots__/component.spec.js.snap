@@ -2,6 +2,7 @@
 
 exports[`ModalRoot component renders ModalRoot when modalType is present 1`] = `
 <mockConstructor
+  customProp="customProp"
   isVisible={true}
   onCloseModal={[MockFunction]}
   onDestroyModal={[MockFunction]}

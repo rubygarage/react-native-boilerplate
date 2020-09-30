@@ -9,7 +9,7 @@ import useContainer from './hook';
 const RoundedButton = ({
   iconName, iconNameActive = iconName, isActive, onPress,
 }) => {
-  const { theme } = useContainer();
+  const theme = useContainer();
 
   const name = isActive ? iconNameActive : iconName;
   const color = isActive ? theme.colors.white : theme.colors.grey700;

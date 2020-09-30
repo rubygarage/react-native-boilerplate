@@ -1,5 +1,6 @@
 import { act } from '@testing-library/react-hooks';
 import { LayoutAnimation, UIManager } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
 
@@ -15,6 +16,11 @@ jest.mock('react-native', () => {
 });
 
 describe('FlashRoot useContainer hook tests', () => {
+  useSelector.mockReturnValue([
+    { id: '1', name: 'flash_1' },
+    { id: '2', name: 'flash_2' },
+  ]);
+
   let { result } = renderHookWithProviders(useContainer);
 
   it('matches snapshot', () => {

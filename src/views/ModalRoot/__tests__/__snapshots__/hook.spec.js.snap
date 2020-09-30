@@ -4,7 +4,7 @@ exports[`ModalRoot useContainer hook matches snapshot 1`] = `
 Object {
   "isVisible": true,
   "modalProps": Object {},
-  "modalType": null,
+  "modalType": Object {},
   "onCloseModal": [Function],
   "onDestroyModal": [Function],
   "setIsVisible": [Function],

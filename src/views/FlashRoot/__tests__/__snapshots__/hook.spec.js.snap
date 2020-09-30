@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlashRoot useContainer hook matches snapshot 1`] = `
+exports[`FlashRoot useContainer hook tests matches snapshot 1`] = `
 Object {
   "doAnimation": [Function],
 }

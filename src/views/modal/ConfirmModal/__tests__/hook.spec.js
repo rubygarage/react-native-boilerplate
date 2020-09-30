@@ -1,15 +1,9 @@
 import { act } from '@testing-library/react-hooks';
 
 import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
+import { dispatch } from 'mocks/react-redux';
 
 import useContainer from '../hook';
-
-const mockDispatch = jest.fn();
-
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: () => mockDispatch,
-}));
 
 describe('ConfirmModal useContainer hook', () => {
   const props = {
@@ -34,26 +28,22 @@ describe('ConfirmModal useContainer hook', () => {
       result.current.handleShouldConfirm();
     });
 
-    expect(result.current.isShouldConfirm).toBe(true);
     expect(props.onCloseModal).toHaveBeenCalled();
   });
 
   describe('checks onModalHide method', () => {
-    it('should dispatch and destroy modal', () => {
-      act(() => { result.current.setShouldConfirm(true); });
-
+    it('should only destroy modal', () => {
       act(() => { result.current.onModalHide(); });
 
-      expect(mockDispatch).toHaveBeenCalledWith({});
+      expect(dispatch).not.toHaveBeenCalledWith({});
       expect(props.onDestroyModal).toHaveBeenCalled();
     });
 
-    it('should only destroy modal', () => {
-      act(() => { result.current.setShouldConfirm(false); });
-
+    it('should dispatch and destroy modal', () => {
+      act(() => { result.current.handleShouldConfirm(); });
       act(() => { result.current.onModalHide(); });
 
-      expect(mockDispatch).not.toHaveBeenCalledWith({});
+      expect(dispatch).toHaveBeenCalledWith({});
       expect(props.onDestroyModal).toHaveBeenCalled();
     });
   });

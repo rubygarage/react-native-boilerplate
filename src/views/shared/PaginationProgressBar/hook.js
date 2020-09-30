@@ -1,12 +1,5 @@
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import useTheme from 'lib/hooks/useTheme';
 
-const useContainer = () => {
-  const theme = useContext(ThemeContext);
-
-  return {
-    theme,
-  };
-};
+const useContainer = () => useTheme();
 
 export default useContainer;

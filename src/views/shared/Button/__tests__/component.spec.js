@@ -13,7 +13,7 @@ const defaultProps = {
 
 jest.mock('../hook', () => ({
   __esModule: true,
-  default: jest.fn(() => ({ theme: mockedTheme })),
+  default: jest.fn(() => mockedTheme),
 }));
 
 describe('Button component', () => {

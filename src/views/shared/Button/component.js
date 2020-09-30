@@ -11,7 +11,7 @@ const Button = ({
   onPress, isSmallHeight, fillColor,
   style,
 }) => {
-  const { theme } = useContainer();
+  const theme = useContainer();
 
   return (
     <S.Wrap

@@ -3,9 +3,7 @@
 exports[`ConfirmModal useContainer hook matches snapshot 1`] = `
 Object {
   "handleShouldConfirm": [Function],
-  "isShouldConfirm": false,
   "onModalHide": [Function],
-  "setShouldConfirm": [Function],
   "theme": Object {
     "colors": null,
     "fonts": null,

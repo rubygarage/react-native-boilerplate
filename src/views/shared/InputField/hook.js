@@ -1,8 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { call, path, pathOr } from 'ramda';
-
 import { useIntl } from 'react-intl';
-import { ThemeContext } from 'styled-components';
+
+import useTheme from 'lib/hooks/useTheme';
 
 function useContainer(props) {
   const {
@@ -11,7 +11,7 @@ function useContainer(props) {
   } = props;
 
   const intl = useIntl();
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
 
   const [isFocused, setIsFocused] = useState(false);
   const [actionWidth, setActionWidth] = useState(0);

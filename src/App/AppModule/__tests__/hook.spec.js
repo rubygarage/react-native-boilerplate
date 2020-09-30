@@ -1,22 +1,18 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { AppState } from 'react-native';
-import * as reactRedux from 'react-redux';
 
 import {
   startListenConnectionState,
   stopListenConnectionState,
 } from 'state/concepts/application/actions';
+import { dispatch } from 'mocks/react-redux';
 
 import useContainer from '../hook';
-
-const dispatch = jest.fn();
 
 jest.spyOn(AppState, 'addEventListener');
 jest.spyOn(AppState, 'removeEventListener');
 
 describe('useContainer', () => {
-  reactRedux.useDispatch = () => dispatch;
-
   let result = null;
   let unmount = null;
 

@@ -1,21 +1,17 @@
 import { act } from '@testing-library/react-hooks';
+import { useSelector } from 'react-redux';
 
 import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
 import { hideModal } from 'state/modal/actions';
+import { dispatch } from 'mocks/react-redux';
 
 import useContainer from '../hook';
-
-const mockDispatch = jest.fn();
-
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: () => mockDispatch,
-}));
 
 describe('ModalRoot useContainer hook', () => {
   let result = null;
 
   beforeEach(() => {
+    useSelector.mockReturnValue({});
     ({ result } = renderHookWithProviders(useContainer));
   });
 
@@ -37,6 +33,6 @@ describe('ModalRoot useContainer hook', () => {
     });
 
     expect(result.current.isVisible).toBe(true);
-    expect(mockDispatch).toHaveBeenCalledWith(hideModal());
+    expect(dispatch).toHaveBeenCalledWith(hideModal());
   });
 });

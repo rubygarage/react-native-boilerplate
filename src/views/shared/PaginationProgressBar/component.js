@@ -6,7 +6,7 @@ import * as S from './styled';
 import useContainer from './hook';
 
 const PaginationProgressBar = ({ isLoading }) => {
-  const { theme } = useContainer();
+  const theme = useContainer();
 
   if (!isLoading) {
     return null;

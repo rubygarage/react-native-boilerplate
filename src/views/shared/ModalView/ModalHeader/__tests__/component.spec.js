@@ -8,9 +8,7 @@ import ModalHeader from '../component';
 
 jest.mock('../hook', () => ({
   __esModule: true,
-  default: jest.fn(() => ({
-    theme: mockedTheme,
-  })),
+  default: jest.fn(() => mockedTheme),
 }));
 
 const component = shallow(<ModalHeader><View /></ModalHeader>);

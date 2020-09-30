@@ -1,7 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import * as R from 'ramda';
-import { ThemeContext } from 'styled-components';
 import { useIntl } from 'react-intl';
+
+import useTheme from 'lib/hooks/useTheme';
 
 const useContainer = (props) => {
   const {
@@ -11,7 +12,7 @@ const useContainer = (props) => {
     onValueChange,
   } = props;
 
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
   const intl = useIntl();
 
   const [isOpen, setIsOpen] = useState(false);

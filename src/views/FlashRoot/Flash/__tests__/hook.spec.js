@@ -2,17 +2,11 @@ import { act } from '@testing-library/react-hooks';
 
 import { hideFlash } from 'state/flash/actions';
 import renderHookWithProviders from 'utils/testHelpers/renderHookWithProviders';
+import { dispatch } from 'mocks/react-redux';
 
 import useContainer from '../hook';
 
 jest.useFakeTimers();
-
-const mockedDispatch = jest.fn();
-
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: () => mockedDispatch,
-}));
 
 describe('doAnimationHook', () => {
   const props = {
@@ -33,20 +27,20 @@ describe('doAnimationHook', () => {
       result.current.onHideFlash();
     });
 
-    expect(mockedDispatch).toHaveBeenCalledWith(hideFlash(props.id));
+    expect(dispatch).toHaveBeenCalledWith(hideFlash(props.id));
     expect(props.doAnimation).toHaveBeenCalled();
   });
 
   it('checks onActionClick method', () => {
-    mockedDispatch.mockClear();
+    dispatch.mockClear();
 
     act(() => {
       result.current.onActionClick();
     });
 
-    expect(mockedDispatch).toHaveBeenCalledTimes(2);
-    expect(mockedDispatch).toHaveBeenNthCalledWith(1, hideFlash(props.id));
-    expect(mockedDispatch).toHaveBeenNthCalledWith(2, { type: 'TEST' });
+    expect(dispatch).toHaveBeenCalledTimes(2);
+    expect(dispatch).toHaveBeenNthCalledWith(1, hideFlash(props.id));
+    expect(dispatch).toHaveBeenNthCalledWith(2, { type: 'TEST' });
   });
 
   describe('Lifecycle', () => {

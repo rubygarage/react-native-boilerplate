@@ -19,13 +19,13 @@ const Alert = ({
   actionTextId,
   type,
 }) => {
-  const { theme, getStyleProps } = useContainer();
+  const { theme, styleProps } = useContainer();
 
   const {
     backgroundColor,
     iconName,
     contentColor,
-  } = getStyleProps(type);
+  } = styleProps[type];
 
   return (
     <S.Wrapper color={backgroundColor} onCloseClick={onCloseClick}>

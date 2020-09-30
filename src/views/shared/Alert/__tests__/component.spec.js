@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
+import { ALERT_TYPES } from 'constants/alert';
 import mockedTheme from 'utils/testHelpers/mockedTheme';
 
 import Alert from '../component';
@@ -12,15 +13,17 @@ const defaultProps = {
   type: 'info',
 };
 
+const mockedStyleProps = {
+  [ALERT_TYPES.error]: { iconName: 'close', contentColor: 'red', backgroundColor: 'red' },
+  [ALERT_TYPES.success]: { iconName: 'tick', contentColor: 'green', backgroundColor: 'green' },
+  [ALERT_TYPES.info]: { iconName: 'info', contentColor: 'blue', backgroundColor: 'blue' },
+};
+
 jest.mock('../hook', () => ({
   __esModule: true,
   default: jest.fn(() => ({
     theme: mockedTheme,
-    getStyleProps: jest.fn(() => ({
-      backgroundColor: '#ededed',
-      iconName: 'switch-camera',
-      contentColor: '#acacac',
-    })),
+    styleProps: mockedStyleProps,
   })),
 }));
 

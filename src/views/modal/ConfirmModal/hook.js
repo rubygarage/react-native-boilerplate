@@ -1,9 +1,10 @@
-import { useContext, useState } from 'react';
-import { ThemeContext } from 'styled-components';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import useTheme from 'lib/hooks/useTheme';
+
 const useContainer = (props) => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
 
   const { onCloseModal, onDestroyModal, confirmAction } = props;
 
@@ -27,8 +28,6 @@ const useContainer = (props) => {
     theme,
     handleShouldConfirm,
     onModalHide,
-    setShouldConfirm,
-    isShouldConfirm,
   };
 };
 

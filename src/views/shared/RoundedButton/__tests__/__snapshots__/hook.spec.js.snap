@@ -2,11 +2,9 @@
 
 exports[`RoundedButton useContainer hook matches snapshot 1`] = `
 Object {
-  "theme": Object {
-    "colors": null,
-    "fonts": null,
-    "sizes": null,
-    "type": "Mocked theme",
-  },
+  "colors": null,
+  "fonts": null,
+  "sizes": null,
+  "type": "Mocked theme",
 }
 `;
