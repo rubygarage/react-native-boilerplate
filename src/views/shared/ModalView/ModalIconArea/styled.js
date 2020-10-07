@@ -1,7 +1,5 @@
 import styled from 'styled-components/native';
 
-import IconView from 'views/shared/Icon';
-
 const Wrap = styled.View`
   justify-content: center;
   align-items: center;
@@ -9,7 +7,7 @@ const Wrap = styled.View`
   margin-bottom: 24px;
 `;
 
-const Icon = styled(IconView)`
+const Icon = styled.View`
   margin-bottom: 16px;
 `;
 

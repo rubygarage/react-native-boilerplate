@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FlashRoot component renders correct item 1`] = `
-<Connect(Flash)
+<Flash
   doAnimation={[MockFunction]}
-  id={0}
+  flashProps={Object {}}
+  id="0"
   message="test_message"
   title="test_title"
   type="info"
@@ -15,10 +16,12 @@ exports[`FlashRoot component renders correctly by default 1`] = `
   data={
     Array [
       Object {
-        "id": 0,
-        "message": "test_message",
-        "title": "test_title",
-        "type": "info",
+        "flashProps": Object {},
+        "id": "1",
+      },
+      Object {
+        "flashProps": Object {},
+        "id": "2",
       },
     ]
   }

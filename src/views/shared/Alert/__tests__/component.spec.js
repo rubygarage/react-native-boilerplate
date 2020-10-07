@@ -1,20 +1,31 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import testIntl from 'utils/testHelpers/testIntl';
+import { ALERT_TYPES } from 'constants/alert';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+
 import Alert from '../component';
 
 const defaultProps = {
   title: { id: 'title_id' },
   subtitle: { id: 'subtitle_id' },
   message: { id: 'message_id' },
-  iconName: 'info',
-  contentColor: 'black',
-  backgroundColor: 'white',
-  intl: testIntl,
-  theme,
+  type: 'info',
 };
+
+const mockedStyleProps = {
+  [ALERT_TYPES.error]: { iconName: 'close', contentColor: 'red', backgroundColor: 'red' },
+  [ALERT_TYPES.success]: { iconName: 'tick', contentColor: 'green', backgroundColor: 'green' },
+  [ALERT_TYPES.info]: { iconName: 'info', contentColor: 'blue', backgroundColor: 'blue' },
+};
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    theme: mockedTheme,
+    styleProps: mockedStyleProps,
+  })),
+}));
 
 describe('Alert component', () => {
   const component = shallow(<Alert {...defaultProps} />);

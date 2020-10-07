@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert useContainer hook matches snapshot 1`] = `
+Object {
+  "styleProps": Object {
+    "error": Object {
+      "backgroundColor": "[mocked red50]",
+      "contentColor": "[mocked red500]",
+      "iconName": "close",
+    },
+    "info": Object {
+      "backgroundColor": "[mocked blue50]",
+      "contentColor": "[mocked blue500]",
+      "iconName": "info",
+    },
+    "success": Object {
+      "backgroundColor": "[mocked green50]",
+      "contentColor": "[mocked green500]",
+      "iconName": "tick",
+    },
+  },
+  "theme": Object {
+    "colors": null,
+    "fonts": null,
+    "sizes": null,
+    "type": "Mocked theme",
+  },
+}
+`;

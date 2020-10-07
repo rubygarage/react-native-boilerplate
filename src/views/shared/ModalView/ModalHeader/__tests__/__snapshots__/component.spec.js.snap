@@ -15,6 +15,7 @@ exports[`ModalHeader component renders correctly default 2`] = `
   >
     <Icon
       allowFontScaling={false}
+      color="[mocked grey500]"
       name="cross"
       size={24}
     />

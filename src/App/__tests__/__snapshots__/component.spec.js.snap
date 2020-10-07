@@ -31,7 +31,7 @@ exports[`App component renders correctly 1`] = `
     }
   >
     <Connect(IntlProvider)>
-      <Connect(AppModule) />
+      <AppModuleComponent />
     </Connect(IntlProvider)>
   </PersistGate>
 </Provider>

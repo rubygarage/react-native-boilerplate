@@ -30,7 +30,7 @@ const Field = styled.TextInput`
     return theme.colors.black;
   }};
   padding-top: 10px;
-  padding-right: ${({ actionWidth }) => (actionWidth + 12)};
+  padding-right: ${({ actionWidth }) => (actionWidth + 12)}px;
   padding-bottom: 10px;
   padding-left: 12px;
   font-size: 14px;

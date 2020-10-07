@@ -2,15 +2,16 @@ import React from 'react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
 
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+
 import ModalHeader from '../component';
 
-const defaultProps = {
-  theme: {
-    colors: {
-    },
-  },
-};
-const component = shallow(<ModalHeader {...defaultProps}><View /></ModalHeader>);
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => mockedTheme),
+}));
+
+const component = shallow(<ModalHeader><View /></ModalHeader>);
 
 describe('ModalHeader component', () => {
   it('renders correctly default', () => {
@@ -19,7 +20,6 @@ describe('ModalHeader component', () => {
 
   it('renders correctly default', () => {
     const props = {
-      ...defaultProps,
       isClosable: true,
       onClose: jest.fn(),
     };

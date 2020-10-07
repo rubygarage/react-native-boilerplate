@@ -5,22 +5,32 @@ exports[`InfoModal component renders correctly default 1`] = `
   isVisible={true}
   onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)>
+  <ModalHeaderComponent
+    isClosable={false}
+  >
     test title
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)>
       test detail
     </Styled(Text)>
   </ModalBody>
   <ModalFooter>
-    <WithTheme(Button)
+    <Button
+      disabled={false}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
+      isMarginRight={false}
+      isOutline={false}
+      isSmallHeight={false}
+      isSmallWidth={false}
       onPress={[MockFunction]}
     >
       <FormattedMessage
         id="shared.ok"
       />
-    </WithTheme(Button)>
+    </Button>
   </ModalFooter>
 </ModalView>
 `;

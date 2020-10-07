@@ -4,13 +4,26 @@ import { shallow } from 'enzyme';
 import { ALERT_TYPES } from 'constants/alert';
 import FlashRoot from '../component';
 
-describe('FlashRoot component', () => {
-  const flash = { id: 0, type: ALERT_TYPES.info, title: 'test_title', message: 'test_message' };
-  const defaultProps = {
-    flashes: [flash],
+const mockedFashes = [
+  { id: '1', flashProps: {} },
+  { id: '2', flashProps: {} },
+];
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: () => ({
+    flashes: mockedFashes,
     doAnimation: jest.fn(),
-  };
-  const component = shallow(<FlashRoot {...defaultProps} />);
+  }),
+}));
+
+describe('FlashRoot component', () => {
+  const flash = { id: '0', type: ALERT_TYPES.info, title: 'test_title', message: 'test_message' };
+  let component = null;
+
+  beforeEach(() => {
+    component = shallow(<FlashRoot />);
+  });
 
   it('renders correctly by default', () => {
     expect(component).toMatchSnapshot();

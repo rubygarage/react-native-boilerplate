@@ -15,7 +15,7 @@ exports[`AppModule component renders correctly 1`] = `
 >
   <SafeAreaProvider>
     <_default />
-    <Connect(ModalRoot) />
+    <ModalRoot />
   </SafeAreaProvider>
 </Component>
 `;

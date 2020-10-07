@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker useContainer hook matches snapshot 1`] = `
+Object {
+  "detectLabel": [Function],
+  "handlePickerToggle": [Function],
+  "handleValueChange": [Function],
+  "intl": Object {
+    "formatMessage": [Function],
+  },
+  "isOpen": false,
+  "setIsOpen": [Function],
+  "theme": Object {
+    "colors": null,
+    "fonts": null,
+    "sizes": null,
+    "type": "Mocked theme",
+  },
+}
+`;

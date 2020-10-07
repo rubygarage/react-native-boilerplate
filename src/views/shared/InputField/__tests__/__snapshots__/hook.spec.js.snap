@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField useContainer hook matches snapshot 1`] = `
+Object {
+  "actionWidth": 0,
+  "getErrorData": [Function],
+  "intl": Object {
+    "formatMessage": [Function],
+  },
+  "isFocused": false,
+  "onActionRendered": [Function],
+  "onBlur": [Function],
+  "onFocus": [Function],
+  "setActionWidth": [Function],
+  "setIsFocused": [Function],
+  "theme": Object {
+    "colors": null,
+    "fonts": null,
+    "sizes": null,
+    "type": "Mocked theme",
+  },
+}
+`;

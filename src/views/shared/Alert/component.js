@@ -5,42 +5,50 @@ import { is } from 'ramda';
 import { FormattedMessage } from 'react-intl';
 
 import Icon from 'views/shared/Icon';
+
 import * as S from './styled';
+import useContainer from './hook';
 
 const Alert = ({
   title,
   subtitle,
   message,
   onCloseClick,
-  iconName,
-  contentColor,
-  backgroundColor,
   onActionClick,
   actionIconName,
   actionTextId,
-  theme,
-}) => (
-  <S.Wrapper color={backgroundColor} onCloseClick={onCloseClick}>
-    <S.IconWrap>
-      <Icon name={iconName} size={28} color={contentColor} />
-    </S.IconWrap>
-    <S.ContentArea>
-      <Text>
-        <S.MessageTitle color={contentColor}>
-          {is(Object, title) ? <FormattedMessage id={title.id} /> : title}
-        </S.MessageTitle>
-        {subtitle && (
+  type,
+}) => {
+  const { theme, styleProps } = useContainer();
+
+  const {
+    backgroundColor,
+    iconName,
+    contentColor,
+  } = styleProps[type];
+
+  return (
+    <S.Wrapper color={backgroundColor} onCloseClick={onCloseClick}>
+      <S.IconWrap>
+        <Icon name={iconName} size={28} color={contentColor} />
+      </S.IconWrap>
+      <S.ContentArea>
+        <Text>
+          <S.MessageTitle color={contentColor}>
+            {is(Object, title) ? <FormattedMessage id={title.id} /> : title}
+          </S.MessageTitle>
+          {subtitle && (
           <S.MessageText color={contentColor}>
             {is(Object, subtitle) ? <FormattedMessage id={subtitle.id} /> : subtitle}
           </S.MessageText>
-        )}
-      </Text>
-      {message && (
+          )}
+        </Text>
+        {message && (
         <S.MessageText color={contentColor}>
           {is(Object, message) ? <FormattedMessage id={message.id} /> : message}
         </S.MessageText>
-      )}
-      {onActionClick && actionTextId
+        )}
+        {onActionClick && actionTextId
         && (
           <S.ActionButton color={contentColor} onPress={onActionClick}>
             {actionIconName && (
@@ -51,24 +59,22 @@ const Alert = ({
             </S.ActionButtonText>
           </S.ActionButton>
         )}
-    </S.ContentArea>
-    {onCloseClick
+      </S.ContentArea>
+      {onCloseClick
       && (
         <S.CloseButton onPress={onCloseClick}>
           <Icon name="cross" size={28} color={contentColor} />
         </S.CloseButton>
       )}
-  </S.Wrapper>
-);
+    </S.Wrapper>
+  );
+};
 
 Alert.propTypes = {
   title: PropTypes.oneOfType([PropTypes.shape(), PropTypes.string]).isRequired,
   subtitle: PropTypes.oneOfType([PropTypes.shape(), PropTypes.string]),
   message: PropTypes.oneOfType([PropTypes.shape(), PropTypes.string]),
-  theme: PropTypes.shape({ colors: PropTypes.shape().isRequired }).isRequired,
-  iconName: PropTypes.string.isRequired,
-  contentColor: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   onCloseClick: PropTypes.func,
   onActionClick: PropTypes.func,
   actionIconName: PropTypes.string,

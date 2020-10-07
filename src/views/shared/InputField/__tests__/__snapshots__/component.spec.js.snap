@@ -9,9 +9,9 @@ exports[`InputField component renders correctly default 1`] = `
   </Styled(Text)>
   <Styled(View)>
     <Styled(Component)
-      actionWidth={0}
+      actionWidth={22}
       isError={false}
-      isFocused={false}
+      isFocused={true}
       onBlur={[MockFunction]}
       onFocus={[MockFunction]}
       placeholder="{Translation id: placeholder_id}"
@@ -30,33 +30,24 @@ exports[`InputField component renders correctly with action 1`] = `
   </Styled(Text)>
   <Styled(View)>
     <Styled(Component)
-      actionWidth={0}
-      isError={true}
-      isFocused={false}
+      actionWidth={22}
+      isError={false}
+      isFocused={true}
       onBlur={[MockFunction]}
       onFocus={[MockFunction]}
       placeholder="{Translation id: placeholder_id}"
       value="value"
     />
-    <Styled(View)>
-      <Styled(View)>
-        <Icon
-          allowFontScaling={false}
-          color="[mocked red500]"
-          name="close"
-          size={16}
-        />
-      </Styled(View)>
-      <Styled(Text)>
-        <FormattedMessage
-          id="error_id"
-        />
-      </Styled(Text)>
-    </Styled(View)>
     <Styled(View)
       onLayout={[MockFunction]}
     >
-      <WithTheme(Button)
+      <Button
+        disabled={false}
+        isBorder={false}
+        isLoading={false}
+        isMarginBottom={false}
+        isMarginRight={false}
+        isOutline={false}
         isSmallHeight={true}
         isSmallWidth={true}
         onPress={[MockFunction]}
@@ -64,7 +55,7 @@ exports[`InputField component renders correctly with action 1`] = `
         <FormattedMessage
           id="action_id"
         />
-      </WithTheme(Button)>
+      </Button>
     </Styled(View)>
   </Styled(View)>
 </Styled(View)>
@@ -79,11 +70,7 @@ exports[`InputField component renders correctly with error 1`] = `
   </Styled(Text)>
   <Styled(View)>
     <Styled(Component)
-      actionWidth={0}
       isError={true}
-      isFocused={false}
-      onBlur={[MockFunction]}
-      onFocus={[MockFunction]}
       placeholder="{Translation id: placeholder_id}"
       value="value"
     />
@@ -92,13 +79,12 @@ exports[`InputField component renders correctly with error 1`] = `
         <Icon
           allowFontScaling={false}
           color="[mocked red500]"
-          name="close"
           size={16}
         />
       </Styled(View)>
       <Styled(Text)>
         <FormattedMessage
-          id="error_id"
+          id="test_id"
         />
       </Styled(Text)>
     </Styled(View)>
@@ -110,9 +96,9 @@ exports[`InputField component renders without label 1`] = `
 <Styled(View)>
   <Styled(View)>
     <Styled(Component)
-      actionWidth={0}
+      actionWidth={22}
       isError={false}
-      isFocused={false}
+      isFocused={true}
       onBlur={[MockFunction]}
       onFocus={[MockFunction]}
       placeholder="{Translation id: placeholder_id}"

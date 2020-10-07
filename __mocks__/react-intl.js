@@ -15,4 +15,6 @@ Intl.injectIntl = (Node) => {
   return renderWrapped;
 };
 
+Intl.useIntl = () => intl;
+
 module.exports = Intl;

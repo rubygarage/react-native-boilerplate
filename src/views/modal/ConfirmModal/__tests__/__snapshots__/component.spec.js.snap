@@ -5,14 +5,14 @@ exports[`ConfirmModal component renders correctly default 1`] = `
   isVisible={true}
   onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)
+  <ModalHeaderComponent
     isClosable={true}
     onClose={[MockFunction]}
   >
     <FormattedMessage
       id="test_title_id"
     />
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)
       key="test_body_1"
@@ -30,24 +30,36 @@ exports[`ConfirmModal component renders correctly default 1`] = `
     </Styled(Text)>
   </ModalBody>
   <ModalFooter>
-    <WithTheme(Button)
+    <Button
+      disabled={false}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
       isMarginRight={true}
       isOutline={true}
+      isSmallHeight={false}
       isSmallWidth={true}
       onPress={[MockFunction]}
     >
       <FormattedMessage
         id="test_dismiss_id"
       />
-    </WithTheme(Button)>
-    <WithTheme(Button)
+    </Button>
+    <Button
+      disabled={false}
       fillColor="[mocked red500]"
-      onPress={[MockFunction]}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
+      isMarginRight={false}
+      isOutline={false}
+      isSmallHeight={false}
+      isSmallWidth={false}
     >
       <FormattedMessage
         id="test_confirm_id"
       />
-    </WithTheme(Button)>
+    </Button>
   </ModalFooter>
 </ModalView>
 `;
@@ -57,14 +69,14 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
   isVisible={true}
   onModalHide={[MockFunction]}
 >
-  <WithTheme(ModalHeader)
+  <ModalHeaderComponent
     isClosable={true}
     onClose={[MockFunction]}
   >
     <FormattedMessage
       id="test_title_id"
     />
-  </WithTheme(ModalHeader)>
+  </ModalHeaderComponent>
   <ModalBody>
     <Styled(Text)
       key="test_body_1"
@@ -82,24 +94,36 @@ exports[`ConfirmModal component renders correctly with default dismiss button 1`
     </Styled(Text)>
   </ModalBody>
   <ModalFooter>
-    <WithTheme(Button)
+    <Button
+      disabled={false}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
       isMarginRight={true}
       isOutline={true}
+      isSmallHeight={false}
       isSmallWidth={true}
       onPress={[MockFunction]}
     >
       <FormattedMessage
         id="shared.cancel"
       />
-    </WithTheme(Button)>
-    <WithTheme(Button)
+    </Button>
+    <Button
+      disabled={false}
       fillColor="[mocked red500]"
-      onPress={[MockFunction]}
+      isBorder={false}
+      isLoading={false}
+      isMarginBottom={false}
+      isMarginRight={false}
+      isOutline={false}
+      isSmallHeight={false}
+      isSmallWidth={false}
     >
       <FormattedMessage
         id="test_confirm_id"
       />
-    </WithTheme(Button)>
+    </Button>
   </ModalFooter>
 </ModalView>
 `;

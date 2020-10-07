@@ -32,7 +32,7 @@ exports[`Wrap styled components S.Field matches snapshot default 1`] = `
         "minHeight": 48,
         "paddingBottom": 10,
         "paddingLeft": 12,
-        "paddingRight": "NaN",
+        "paddingRight": "NaNpx",
         "paddingTop": 10,
       },
     ]
@@ -59,7 +59,7 @@ exports[`Wrap styled components S.Field matches snapshot error 1`] = `
         "minHeight": 48,
         "paddingBottom": 10,
         "paddingLeft": 12,
-        "paddingRight": "NaN",
+        "paddingRight": "NaNpx",
         "paddingTop": 10,
       },
     ]
@@ -86,7 +86,7 @@ exports[`Wrap styled components S.Field matches snapshot focused 1`] = `
         "minHeight": 48,
         "paddingBottom": 10,
         "paddingLeft": 12,
-        "paddingRight": "NaN",
+        "paddingRight": "NaNpx",
         "paddingTop": 10,
       },
     ]

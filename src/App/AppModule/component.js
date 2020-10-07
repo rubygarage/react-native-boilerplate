@@ -1,22 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import theme from 'constants/theme';
 
 import AppNavigator from '../navigation/AppNavigator';
 import ModalRoot from '../../views/ModalRoot';
 
-const AppModuleComponent = ({ theme }) => (
-  <ThemeProvider theme={theme}>
-    <SafeAreaProvider>
-      <AppNavigator />
-      <ModalRoot />
-    </SafeAreaProvider>
-  </ThemeProvider>
-);
+import useContainer from './hook';
 
-AppModuleComponent.propTypes = {
-  theme: PropTypes.shape().isRequired,
+const AppModuleComponent = () => {
+  useContainer();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <SafeAreaProvider>
+        <AppNavigator />
+        <ModalRoot />
+      </SafeAreaProvider>
+    </ThemeProvider>
+  );
 };
 
 export default AppModuleComponent;

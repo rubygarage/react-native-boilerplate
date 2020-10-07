@@ -3,7 +3,7 @@
 exports[`Button component renders correctly default 1`] = `
 <Styled(Component)
   disabled={false}
-  fillColor="[mocked blue200]"
+  fillColor="[mocked white]"
   isBorder={false}
   isMarginBottom={false}
   isMarginRight={false}
@@ -13,7 +13,6 @@ exports[`Button component renders correctly default 1`] = `
   onPress={[MockFunction]}
 >
   <Styled(Text)
-    fillColor="[mocked blue200]"
     isOutline={false}
   >
     <Text>
@@ -26,7 +25,7 @@ exports[`Button component renders correctly default 1`] = `
 exports[`Button component renders correctly with enabled styles 1`] = `
 <Styled(Component)
   disabled={false}
-  fillColor="[mocked blue200]"
+  fillColor="[mocked white]"
   isBorder={false}
   isMarginBottom={false}
   isMarginRight={false}
@@ -36,7 +35,6 @@ exports[`Button component renders correctly with enabled styles 1`] = `
   onPress={[MockFunction]}
 >
   <Styled(Text)
-    fillColor="[mocked blue200]"
     isOutline={true}
   >
     <Text>
@@ -72,7 +70,7 @@ exports[`Button component renders correctly with enabled styles and fillColor 1`
 exports[`Button component renders correctly with loading state 1`] = `
 <Styled(Component)
   disabled={false}
-  fillColor="[mocked blue200]"
+  fillColor="[mocked white]"
   isBorder={false}
   isMarginBottom={false}
   isMarginRight={false}

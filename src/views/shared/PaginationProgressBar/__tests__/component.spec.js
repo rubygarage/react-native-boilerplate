@@ -1,14 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+
 import PaginationProgressBar from '../component';
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => mockedTheme),
+}));
 
 describe('PaginationProgressBar component', () => {
   const defaultProps = {
     isLoading: true,
-    theme,
   };
+
   const component = shallow(<PaginationProgressBar {...defaultProps} />);
 
   it('renders correctly when loading', () => {

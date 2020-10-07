@@ -1,25 +1,39 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
-import testIntl from 'utils/testHelpers/testIntl';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+import mockedIntl from 'utils/testHelpers/testIntl';
+
 import InputField from '../component';
+import * as useContainer from '../hook';
 
 const defaultProps = {
   labelId: 'label_id',
   placeholderId: 'placeholder_id',
-  theme,
   onActionRendered: jest.fn(),
-  onFocus: jest.fn(),
-  onBlur: jest.fn(),
   borderColor: 'white',
   borderWidth: 2,
-  actionWidth: 0,
-  form: { handleChange: jest.fn() },
+  form: {
+    handleChange: jest.fn(),
+    handleBlur: jest.fn(),
+    errors: {},
+  },
   field: { name: 'testName', value: 'value' },
-  isFocused: false,
-  intl: testIntl,
 };
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    isFocused: true,
+    actionWidth: 22,
+    onActionRendered: jest.fn(),
+    onFocus: jest.fn(),
+    onBlur: jest.fn(),
+    getErrorData: jest.fn(() => ({ })),
+    intl: mockedIntl,
+    theme: mockedTheme,
+  })),
+}));
 
 describe('InputField component', () => {
   const component = shallow(<InputField {...defaultProps} />);
@@ -37,16 +51,6 @@ describe('InputField component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('renders correctly with error', () => {
-    const props = {
-      ...defaultProps,
-      errorId: 'error_id',
-      errorIcon: 'close',
-    };
-    component.setProps(props);
-    expect(component).toMatchSnapshot();
-  });
-
   it('renders correctly with action', () => {
     const props = {
       ...defaultProps,
@@ -55,5 +59,17 @@ describe('InputField component', () => {
     };
     component.setProps(props);
     expect(component).toMatchSnapshot();
+  });
+
+  it('renders correctly with error', () => {
+    useContainer.default.mockImplementation(() => ({
+      getErrorData: jest.fn(() => ({ errorId: 'test_id' })),
+      intl: mockedIntl,
+      theme: mockedTheme,
+    }));
+
+    const withError = shallow(<InputField {...defaultProps} />);
+
+    expect(withError).toMatchSnapshot();
   });
 });

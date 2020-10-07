@@ -1,8 +1,23 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import theme from 'utils/testHelpers/mockedTheme';
+import mockedTheme from 'utils/testHelpers/mockedTheme';
+import mockedIntl from 'utils/testHelpers/testIntl';
+
 import Picker from '../component';
+
+jest.mock('../hook', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    isOpen: false,
+    setIsOpen: jest.fn(),
+    detectLabel: jest.fn(),
+    handlePickerToggle: jest.fn(),
+    handleValueChange: jest.fn(),
+    intl: mockedIntl,
+    theme: mockedTheme,
+  })),
+}));
 
 describe('Picker component', () => {
   const defaultProps = {
@@ -14,7 +29,6 @@ describe('Picker component', () => {
     options: [
       { key: 'key0', label: 'label0', value: 'value0' },
       { key: 'key1', label: 'label1', value: 'value1' }],
-    theme,
   };
   const component = shallow(<Picker {...defaultProps} />);
 
