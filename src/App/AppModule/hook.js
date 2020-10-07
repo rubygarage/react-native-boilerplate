@@ -13,7 +13,7 @@ const useContainer = () => {
 
   useEffect(() => {
     dispatch(startListenConnectionState());
-  });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const handleAppStateChange = (nextAppState) => {
