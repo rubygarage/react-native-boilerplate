@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react-hooks';
 import { AppState } from 'react-native';
 
 import {
@@ -13,8 +13,12 @@ jest.spyOn(AppState, 'addEventListener');
 jest.spyOn(AppState, 'removeEventListener');
 
 describe('useContainer', () => {
-  let result = null;
-  let unmount = null;
+  let result;
+  let unmount;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
 
   beforeEach(() => {
     ({ result, unmount } = renderHook(useContainer));
@@ -24,32 +28,45 @@ describe('useContainer', () => {
     expect(result.current).toMatchSnapshot();
   });
 
-  describe('Lifecycle', () => {
-    it('checks mounting', () => {
-      expect(dispatch).toHaveBeenCalledWith(startListenConnectionState());
-      expect(AppState.addEventListener).toHaveBeenCalledWith('change', result.current.handleAppStateChange);
+  describe('lifecycle', () => {
+    describe('mount', () => {
+      it('starts listening connection state', () => {
+        expect(dispatch).toHaveBeenCalledWith(startListenConnectionState());
+      });
+
+      it('subscribes to app state changes', () => {
+        expect(AppState.addEventListener).toHaveBeenCalledWith(
+          'change',
+          expect.any(Function),
+        );
+      });
     });
 
-    it('checks unmounting', () => {
-      unmount();
+    describe('unmount', () => {
+      beforeEach(() => {
+        unmount();
+      });
 
-      expect(AppState.removeEventListener).toHaveBeenCalledWith('change', result.current.handleAppStateChange);
+      it('unsubscribes from app state changes', () => {
+        expect(AppState.removeEventListener).toHaveBeenCalledWith(
+          'change',
+          expect.any(Function),
+        );
+      });
     });
   });
 
   describe('checks handleAppStateChange method', () => {
     it('should start listen connection state', () => {
-      act(() => {
-        result.current.handleAppStateChange('active');
-      });
+      const callback = AppState.addEventListener.mock.calls[0][1];
+      callback('active');
 
       expect(dispatch).toHaveBeenCalledWith(startListenConnectionState());
     });
 
     it('should not start listen connection state', () => {
-      act(() => {
-        result.current.handleAppStateChange('background');
-      });
+      const callback = AppState.addEventListener.mock.calls[0][1];
+      callback('background');
 
       expect(dispatch).toHaveBeenCalledWith(stopListenConnectionState());
     });

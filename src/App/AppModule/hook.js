@@ -11,30 +11,25 @@ import {
 const useContainer = () => {
   const dispatch = useDispatch();
 
-  /**
-   * Handle App state.
-   */
-  const handleAppStateChange = (nextAppState) => {
-    if (nextAppState === 'active') {
-      dispatch(startListenConnectionState());
-    } else {
-      dispatch(stopListenConnectionState());
-    }
-  };
-
-  // Did mount
   useEffect(() => {
     dispatch(startListenConnectionState());
+  });
+
+  useEffect(() => {
+    const handleAppStateChange = (nextAppState) => {
+      if (nextAppState === 'active') {
+        dispatch(startListenConnectionState());
+      } else {
+        dispatch(stopListenConnectionState());
+      }
+    };
+
     AppState.addEventListener('change', handleAppStateChange);
 
     return () => {
       AppState.removeEventListener('change', handleAppStateChange);
     };
-  }, []);
-
-  return {
-    handleAppStateChange,
-  };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 };
 
 export default useContainer;
