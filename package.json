@@ -37,7 +37,7 @@
     "qs": "^6.9.4",
     "ramda": "^0.27.1",
     "react": "16.13.1",
-    "react-intl": "^5.8.1",
+    "react-intl": "^5.20.3",
     "react-intl-formatted-duration": "^4.0.0",
     "react-intl-redux": "^2.2.0",
     "react-native": "0.63.2",
